@@ -19,6 +19,9 @@ Login to your account
     <string name="email">
     Email
     </string>
+    <string name="register">
+    Register
+    </string>
     <string name="password">
     Password
     </string>
