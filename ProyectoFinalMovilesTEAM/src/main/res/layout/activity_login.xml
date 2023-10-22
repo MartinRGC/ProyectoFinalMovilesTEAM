@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="LoginActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="536dp"
+        android:layout_height="695dp"
+        android:layout_marginBottom="212dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/logback" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="408dp"
+        android:layout_height="448dp"
+        android:layout_marginTop="316dp"
+        android:layout_marginEnd="128dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/reclog" />
+
+    <TextView
+        android:id="@+id/tvlog1"
+        android:layout_width="292dp"
+        android:layout_height="63dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/login_to_yo"
+        android:textAppearance="@style/login_to_yo"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.071" />
+
+    <EditText
+        android:id="@+id/edtemail"
+        android:layout_width="314dp"
+        android:layout_height="49dp"
+        android:background="@drawable/rectext1"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/email"
+        android:textAppearance="@style/email"
+        android:textColor="#949494"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.373"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/tvlog1"
+        app:layout_constraintVertical_bias="0.079" />
+
+    <EditText
+        android:id="@+id/edtpassw"
+        android:layout_width="314dp"
+        android:layout_height="49dp"
+        android:background="@drawable/rectext1"
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/password"
+        android:textAppearance="@style/password"
+        android:textColor="#949494"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.439"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtemail"
+        app:layout_constraintVertical_bias="0.118" />
+
+    <TextView
+        android:id="@+id/forgot_your"
+        android:layout_width="174dp"
+        android:layout_height="28dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:fontFamily="@font/poppins"
+        android:gravity="center_horizontal|top"
+        android:text="@string/forgot_your"
+        android:textAppearance="@style/forgot_your"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.89"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.809" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="304dp"
+        android:layout_height="49dp"
+        android:background="@drawable/rectsignup"
+        android:text="@string/login"
+        android:textAppearance="@style/login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.885" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="169dp"
+        android:layout_height="30dp"
+        android:text="@string/don_t_have_"
+        android:textAppearance="@style/don_t_have_"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.351"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="122dp"
+        android:layout_height="32dp"
+        android:text="@string/sing_up"
+        android:textAppearance="@style/sing_up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.878"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.952" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

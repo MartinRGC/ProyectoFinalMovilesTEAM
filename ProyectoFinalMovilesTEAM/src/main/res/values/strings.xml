@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">ProyectoFinalMóvilesTEAM</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+
+    <string name="login_to_yo">
+Login to your account
+
+</string>
+    <string name="email">
+    Email
+    </string>
+    <string name="password">
+    Password
+    </string>
+    <string name="login">
+    Login
+    </string>
+    <string name="forgot_your">
+    Forgot your password?
+    </string>
+    <string name="don_t_have_">
+    Don\u00C2\u00B4t have an account?
+    </string>
+    <string name="sing_up">
+    Sing up
+     </string>
+    <string name="By_selecting_you_agree_to_the_following">
+    By_selecting_you_agree_to_the_following
+    </string>
+    <string name="direc_ini">Jirón Alonso de Molina 1652</string>
+    <string name="busca_ini">  ¿Con hambre? Píde algo!</string>
+    <string name="direc_usu">Direcciones</string>
+    <string name="Terms_and_conditions">
+    Terms_and_conditions
+    </string>
+
+    <string name="Usuarios">
+    Usuarios
+    </string>
+    <string name="Restaurantes">
+    Restaurantes
+    </string>
+    <string name="Tiendas">
+    Tiendas
+    </string>
+    <string name="Pedidos">
+    Pedidos
+    </string>
+    <string name="Menu_principal_ADM">
+    Menu_principal_ADM
+    </string>
+    <string name="Estadisticas_General">
+    Estadisticas General
+    </string>
+    <string name="Repartidores">
+    Repartidores
+    </string>
+</resources>
