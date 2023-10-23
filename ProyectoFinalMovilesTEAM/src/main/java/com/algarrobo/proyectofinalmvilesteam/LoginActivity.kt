@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import com.algarrobo.proyectofinalmvilesteam.ui.fragments.RegistercustomerFragment
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthException
@@ -49,7 +50,7 @@ class LoginActivity : AppCompatActivity() {
                 }
         }
         btnRegister.setOnClickListener{
-          //  startActivity(Intent(this, LoginActivity::class.java)) redirección al fragment registro
+           startActivity(Intent(this, RegistercustomerFragment::class.java)) // redirección al fragment registro
         }
     }
 }

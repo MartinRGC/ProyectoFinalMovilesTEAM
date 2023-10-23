@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.RegistersellerFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:id="@+id/bncon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="103dp"
+        android:background="#D9D9D9"
+        android:text="Consumer"
+        android:textColor="#474646"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnsel"
+        app:layout_constraintEnd_toStartOf="@+id/btnsel"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnsel"
+        android:layout_width="105dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="60dp"
+        android:background="#462B9C"
+        android:text="Seller"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toTopOf="@+id/tvsignupcon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bncon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnsignsel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="79dp"
+        android:layout_marginBottom="53dp"
+        android:background="@drawable/rectsignup"
+        android:text="Sign up"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/tvcondcon"
+        app:layout_constraintEnd_toEndOf="@+id/edtemailsel"
+        app:layout_constraintHorizontal_bias="0.556"
+        app:layout_constraintStart_toStartOf="@+id/tvcondcon"
+        app:layout_constraintTop_toBottomOf="@+id/edtemailsel" />
+
+    <TextView
+        android:id="@+id/tvsignupcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="31dp"
+        android:text="Sign up free account"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/edtrucsel"
+        app:layout_constraintStart_toStartOf="@+id/edtrucsel"
+        app:layout_constraintTop_toBottomOf="@+id/btnsel" />
+
+    <TextView
+        android:id="@+id/tvcondcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="By selecting up you agree to the following "
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/tvtermscon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnsignsel" />
+
+    <TextView
+        android:id="@+id/tvtermscon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="terms and coditions"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvcondcon" />
+
+    <EditText
+        android:id="@+id/edtphonesel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="252dp"
+        android:background="@drawable/rectext1"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Phone"
+        android:textColor="#949494"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bncon" />
+
+    <EditText
+        android:id="@+id/edtemailsel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectext1"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Email"
+        android:textColor="#949494"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtdatesel" />
+
+    <EditText
+        android:id="@+id/edtrucsel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="26dp"
+        android:background="@drawable/rectext1"
+        android:ems="10"
+        android:inputType="text"
+        android:text="RUC"
+        android:textColor="#949494"
+        app:layout_constraintBottom_toTopOf="@+id/edtpsswsel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvsignupcon" />
+
+    <EditText
+        android:id="@+id/edtdatesel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/rectext1"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Date of birth"
+        android:textColor="#949494"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edtphonesel" />
+
+    <EditText
+        android:id="@+id/edtpsswsel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/rectext1"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Password"
+        android:textColor="#949494"
+        app:layout_constraintBottom_toTopOf="@+id/edtphonesel"
+        app:layout_constraintStart_toStartOf="@+id/edtrucsel"
+        app:layout_constraintTop_toBottomOf="@+id/edtrucsel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
