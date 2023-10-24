@@ -8,7 +8,6 @@ import android.widget.EditText
 import com.algarrobo.proyectofinalmvilesteam.ui.fragments.RegistercustomerFragment
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseAuthException
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
-import com.algarrobo.proyectofinalmvilesteam.LoginActivity
 import com.algarrobo.proyectofinalmvilesteam.R
 
 
@@ -21,19 +20,22 @@ class RegistercustomerFragment : Fragment() {
         // Inflate the layout for this fragment
         val view: View = inflater.inflate(R.layout.fragment_registercustomer, container, false)
 
-        val edtrucsel: EditText = view.findViewById(R.id.edtrucsel)
-        val edtpsswsel: EditText = view.findViewById(R.id.edtpsswsel)
-        val edtphonesel: EditText = view.findViewById(R.id.edtphonesel)
-        val edtdatesel: EditText = view.findViewById(R.id.edtdatesel)
-        val edtemailsel: EditText = view.findViewById(R.id.edtrucsel)
-        val btnsignsel: Button = view.findViewById(R.id.btnsignsel)
-        val bncon: Button = view.findViewById(R.id.bncon)
+        val edtnamecon: EditText = view.findViewById(R.id.edtusercutomer)
+        val edtpsswcon: EditText = view.findViewById(R.id.edtpsswcustomer)
+        val edtphonecon: EditText = view.findViewById(R.id.edtphonecustomer)
+        val edtdatecon: EditText = view.findViewById(R.id.edtdatecustomer)
+        val edtemailcon: EditText = view.findViewById(R.id.edtemailcustomer)
+        val btnsigncon: Button = view.findViewById(R.id.btnsigncustomer)
+        val bncon: Button = view.findViewById(R.id.bncustomer)
         val btnsel: Button = view.findViewById(R.id.btnsel)
         return view
 
-        btnsel.setOnClickListener {
-            val intent = Intent(this, RegistersellerFragment::class.java)
-            startActivity(intent)
+      btnsel.setOnClickListener {
+           val intent = Intent(requireActivity(),RegistersellerFragment::class.java)
+        }
+
+        bncon.setOnClickListener {
+            val intent = Intent(requireActivity(),RegistercustomerFragment::class.java)
         }
     }
 

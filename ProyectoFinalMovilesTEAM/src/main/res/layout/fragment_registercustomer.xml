@@ -9,7 +9,7 @@
 
     <!-- TODO: Update blank fragment layout -->
     <Button
-        android:id="@+id/bncon"
+        android:id="@+id/bncustomer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="103dp"
@@ -32,11 +32,11 @@
         android:textColor="#474646"
         app:layout_constraintBottom_toTopOf="@+id/tvsignupcon"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/bncon"
+        app:layout_constraintStart_toEndOf="@+id/bncustomer"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnsignsel"
+        android:id="@+id/btnsigncustomer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="77dp"
@@ -46,9 +46,9 @@
         android:text="Sign up"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/tvcondcon"
-        app:layout_constraintEnd_toEndOf="@+id/edtemailsel"
+        app:layout_constraintEnd_toEndOf="@+id/edtemailcustomer"
         app:layout_constraintStart_toStartOf="@+id/tvcondcon"
-        app:layout_constraintTop_toBottomOf="@+id/edtemailsel" />
+        app:layout_constraintTop_toBottomOf="@+id/edtemailcustomer" />
 
     <TextView
         android:id="@+id/tvsignupcon"
@@ -58,8 +58,8 @@
         android:layout_marginBottom="31dp"
         android:text="Sign up free account"
         android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/edtrucsel"
-        app:layout_constraintStart_toStartOf="@+id/edtrucsel"
+        app:layout_constraintBottom_toTopOf="@+id/edtusercutomer"
+        app:layout_constraintStart_toStartOf="@+id/edtusercutomer"
         app:layout_constraintTop_toBottomOf="@+id/btnsel" />
 
     <TextView
@@ -72,7 +72,7 @@
         app:layout_constraintBottom_toTopOf="@+id/tvtermscon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnsignsel" />
+        app:layout_constraintTop_toBottomOf="@+id/btnsigncustomer" />
 
     <TextView
         android:id="@+id/tvtermscon"
@@ -87,7 +87,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvcondcon" />
 
     <EditText
-        android:id="@+id/edtphonesel"
+        android:id="@+id/edtphonecustomer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="22dp"
@@ -96,12 +96,12 @@
         android:inputType="text"
         android:text="Phone"
         android:textColor="#949494"
-        app:layout_constraintBottom_toTopOf="@+id/edtdatesel"
-        app:layout_constraintStart_toStartOf="@+id/edtpsswsel"
-        app:layout_constraintTop_toBottomOf="@+id/edtpsswsel" />
+        app:layout_constraintBottom_toTopOf="@+id/edtdatecustomer"
+        app:layout_constraintStart_toStartOf="@+id/edtpsswcustomer"
+        app:layout_constraintTop_toBottomOf="@+id/edtpsswcustomer" />
 
     <EditText
-        android:id="@+id/edtemailsel"
+        android:id="@+id/edtemailcustomer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
@@ -110,12 +110,12 @@
         android:inputType="text"
         android:text="Email"
         android:textColor="#949494"
-        app:layout_constraintBottom_toTopOf="@+id/btnsignsel"
-        app:layout_constraintStart_toStartOf="@+id/edtdatesel"
-        app:layout_constraintTop_toBottomOf="@+id/edtdatesel" />
+        app:layout_constraintBottom_toTopOf="@+id/btnsigncustomer"
+        app:layout_constraintStart_toStartOf="@+id/edtdatecustomer"
+        app:layout_constraintTop_toBottomOf="@+id/edtdatecustomer" />
 
     <EditText
-        android:id="@+id/edtrucsel"
+        android:id="@+id/edtusercutomer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="26dp"
@@ -124,13 +124,13 @@
         android:inputType="text"
         android:text="Username"
         android:textColor="#949494"
-        app:layout_constraintBottom_toTopOf="@+id/edtpsswsel"
+        app:layout_constraintBottom_toTopOf="@+id/edtpsswcustomer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvsignupcon" />
 
     <EditText
-        android:id="@+id/edtdatesel"
+        android:id="@+id/edtdatecustomer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
@@ -139,12 +139,12 @@
         android:inputType="text"
         android:text="Date of birth"
         android:textColor="#949494"
-        app:layout_constraintBottom_toTopOf="@+id/edtemailsel"
-        app:layout_constraintStart_toStartOf="@+id/edtphonesel"
-        app:layout_constraintTop_toBottomOf="@+id/edtphonesel" />
+        app:layout_constraintBottom_toTopOf="@+id/edtemailcustomer"
+        app:layout_constraintStart_toStartOf="@+id/edtphonecustomer"
+        app:layout_constraintTop_toBottomOf="@+id/edtphonecustomer" />
 
     <EditText
-        android:id="@+id/edtpsswsel"
+        android:id="@+id/edtpsswcustomer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="22dp"
@@ -153,7 +153,7 @@
         android:inputType="text"
         android:text="Password"
         android:textColor="#949494"
-        app:layout_constraintBottom_toTopOf="@+id/edtphonesel"
-        app:layout_constraintStart_toStartOf="@+id/edtrucsel"
-        app:layout_constraintTop_toBottomOf="@+id/edtrucsel" />
+        app:layout_constraintBottom_toTopOf="@+id/edtphonecustomer"
+        app:layout_constraintStart_toStartOf="@+id/edtusercutomer"
+        app:layout_constraintTop_toBottomOf="@+id/edtusercutomer" />
 </androidx.constraintlayout.widget.ConstraintLayout>
