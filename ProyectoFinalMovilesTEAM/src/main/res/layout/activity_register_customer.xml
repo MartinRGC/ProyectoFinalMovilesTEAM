@@ -2,12 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.RegistercustomerFragment">
+    tools:context=".RegisterCustomerActivity">
 
-    <!-- TODO: Update blank fragment layout -->
     <Button
         android:id="@+id/bncustomer"
         android:layout_width="wrap_content"
@@ -156,4 +154,5 @@
         app:layout_constraintBottom_toTopOf="@+id/edtphonecustomer"
         app:layout_constraintStart_toStartOf="@+id/edtusercutomer"
         app:layout_constraintTop_toBottomOf="@+id/edtusercutomer" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
