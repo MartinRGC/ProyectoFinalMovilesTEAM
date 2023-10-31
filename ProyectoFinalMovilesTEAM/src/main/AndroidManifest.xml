@@ -13,6 +13,12 @@
         android:theme="@style/Theme.ProyectoFinalMóvilesTEAM"
         tools:targetApi="31">
         <activity
+            android:name=".UserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PrincipalActivity"
+            android:exported="false" />
+        <activity
             android:name=".RegisterSellerActivity"
             android:exported="false" />
         <activity

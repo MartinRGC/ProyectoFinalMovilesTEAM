@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hola!"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="34dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="74dp"
+        tools:layout_editor_absoluteY="34dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Que podemos hacer por ti?"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="67dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="108dp"
+        android:layout_height="97dp"
+        app:srcCompat="@drawable/rec_9"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="104dp" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="109dp"
+        android:layout_height="97dp"
+        app:srcCompat="@drawable/rec_9"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="210dp" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="109dp"
+        android:layout_height="97dp"
+        app:srcCompat="@drawable/rec_9"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="147dp" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="113dp"
+        android:layout_height="97dp"
+        app:srcCompat="@drawable/rec_9"
+        tools:layout_editor_absoluteX="284dp"
+        tools:layout_editor_absoluteY="104dp" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="61dp"
+        android:layout_height="55dp"
+        app:srcCompat="@drawable/usuario"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="110dp" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="72dp"
+        android:layout_height="62dp"
+        app:srcCompat="@drawable/servicio_cliente"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="210dp" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="88dp"
+        android:layout_height="59dp"
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        tools:layout_editor_absoluteX="171dp"
+        tools:layout_editor_absoluteY="151dp" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="61dp"
+        android:layout_height="64dp"
+        app:srcCompat="@drawable/historial"
+        tools:layout_editor_absoluteX="311dp"
+        tools:layout_editor_absoluteY="110dp" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="112dp"
+        android:layout_height="96dp"
+        app:srcCompat="@drawable/rec_9"
+        tools:layout_editor_absoluteX="283dp"
+        tools:layout_editor_absoluteY="211dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ajustes de usuario"
+        android:textSize="10dp"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="172dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Servicio al cliente"
+        android:textSize="10dp"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="280dp" />
+
+    <ImageView
+        android:id="@+id/imageView35"
+        android:layout_width="66dp"
+        android:layout_height="65dp"
+        app:srcCompat="@drawable/metodo_pago"
+        tools:layout_editor_absoluteX="303dp"
+        tools:layout_editor_absoluteY="210dp" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Historial de pedidos"
+        android:textSize="10dp"
+        tools:layout_editor_absoluteX="296dp"
+        tools:layout_editor_absoluteY="174dp" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Método de pagos"
+        android:textSize="10dp"
+        tools:layout_editor_absoluteX="303dp"
+        tools:layout_editor_absoluteY="280dp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Puntos"
+        android:textSize="10dp"
+        tools:layout_editor_absoluteX="199dp"
+        tools:layout_editor_absoluteY="218dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mi cuenta"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="323dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="355dp"
+        android:layout_height="46dp"
+        android:text="Direcciones"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="362dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="354dp"
+        android:layout_height="46dp"
+        android:text="Idioma"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="421dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="353dp"
+        android:layout_height="47dp"
+        android:text="Ajustes de notificaciones"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="484dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="350dp"
+        android:layout_height="47dp"
+        android:text="Eliminar cuenta"
+        tools:layout_editor_absoluteX="48dp"
+        tools:layout_editor_absoluteY="547dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
