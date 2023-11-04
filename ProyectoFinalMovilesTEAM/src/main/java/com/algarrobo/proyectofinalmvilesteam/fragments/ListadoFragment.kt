@@ -47,3 +47,4 @@ class ListadoFragment : Fragment() {
         return view
     }
 }
+//arreglo
