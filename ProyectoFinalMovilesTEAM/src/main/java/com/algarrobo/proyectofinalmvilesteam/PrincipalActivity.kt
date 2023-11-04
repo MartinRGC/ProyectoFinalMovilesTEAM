@@ -13,12 +13,13 @@ class PrincipalActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_principal)
 
+        val btnResta: Button = findViewById(R.id.btnResta)
+
+        btnResta.setOnClickListener{
+            startActivity(Intent(this,ListadoFragment::class.java))
+        }
     }
     fun usuario(view: View){
         startActivity(Intent(this,UserActivity::class.java))
     }
-    fun restaurante(view: View){
-        startActivity(Intent(this,ListadoFragment::class.java))
-    }
-
 }
