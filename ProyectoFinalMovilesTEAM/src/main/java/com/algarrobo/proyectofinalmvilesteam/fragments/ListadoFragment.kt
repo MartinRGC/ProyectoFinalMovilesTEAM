@@ -39,12 +39,12 @@ class ListadoFragment : Fragment() {
                     when(dc.type){
                         DocumentChange.Type.ADDED -> {
                             lstRestau.add(
-                                RestauranteModel(dc.document.data["image"].toString(),
+                                RestauranteModel(dc.document.data["imageUrl"].toString(),
                                     dc.document.data["nombre"].toString()))
                                 rvRestau.adapter = RestauAdapter(lstRestau)
                         }
                         DocumentChange.Type.MODIFIED -> {
-                            RestauranteModel(dc.document.data["image"].toString(),
+                            RestauranteModel(dc.document.data["imageUrl"].toString(),
                                 dc.document.data["nombre"].toString())
                             rvRestau.adapter = RestauAdapter(lstRestau)
                         }

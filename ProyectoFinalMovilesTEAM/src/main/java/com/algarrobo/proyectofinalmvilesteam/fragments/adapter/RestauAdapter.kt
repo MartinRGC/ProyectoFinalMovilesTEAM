@@ -10,6 +10,7 @@ import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
 import com.algarrobo.proyectofinalmvilesteam.R
 import com.algarrobo.proyectofinalmvilesteam.models.RestauranteModel
+import com.squareup.picasso.Picasso
 
 class RestauAdapter(private var lstRestau: List<RestauranteModel>): RecyclerView.Adapter<RestauAdapter.ViewHolder>() {
     class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView)
@@ -30,6 +31,6 @@ class RestauAdapter(private var lstRestau: List<RestauranteModel>): RecyclerView
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val itemRestau = lstRestau[position]
         holder.tvNombre.text = itemRestau.nombre
-        //holder.ivRest.setImageResource(itemRestau.image)
+        Picasso.get().load(itemRestau.imagrUrl).into(holder.ivRest)
     }
 }

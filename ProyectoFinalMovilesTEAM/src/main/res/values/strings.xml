@@ -13,29 +13,29 @@
 
 
     <string name="login_to_yo">
-Login to your account
+Iniciar sesión
 
 </string>
     <string name="email">
     Email
     </string>
     <string name="register">
-    Register
+    Registrate
     </string>
     <string name="password">
     Password
     </string>
     <string name="login">
-    Login
+    Iniciar
     </string>
     <string name="forgot_your">
-    Forgot your password?
+    Olvidaste tu contraseña?
     </string>
     <string name="don_t_have_">
-    Don\u00C2\u00B4t have an account?
+    No tienes una cuenta?
     </string>
     <string name="sing_up">
-    Sing up
+    Registrate
      </string>
     <string name="By_selecting_you_agree_to_the_following">
     By_selecting_you_agree_to_the_following

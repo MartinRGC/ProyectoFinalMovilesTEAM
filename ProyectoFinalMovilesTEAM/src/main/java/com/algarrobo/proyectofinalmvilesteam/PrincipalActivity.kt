@@ -18,7 +18,6 @@ class PrincipalActivity : AppCompatActivity() {
         btnResta.setOnClickListener{
             startActivity(Intent(this,ListadoFragment::class.java))
         }
-
     }
     fun usuario(view: View){
         startActivity(Intent(this,UserActivity::class.java))
