@@ -56,5 +56,6 @@ class ListadoFragment : Fragment() {
                 rvRestau.layoutManager = LinearLayoutManager(requireContext())
             }
         return view
+        //uwu
     }
 }
