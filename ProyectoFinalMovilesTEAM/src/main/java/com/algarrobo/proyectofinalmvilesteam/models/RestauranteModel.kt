@@ -1,6 +1,6 @@
 package com.algarrobo.proyectofinalmvilesteam.models
 
 data class RestauranteModel(
-    val imagrUrl: String ="",
+    val imageUrl: String ="",
     val nombre: String=""
 )

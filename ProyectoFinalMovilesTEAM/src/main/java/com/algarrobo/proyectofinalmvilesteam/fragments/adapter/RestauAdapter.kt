@@ -16,7 +16,7 @@ class RestauAdapter(private var lstRestau: List<RestauranteModel>): RecyclerView
     class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView)
     {
         val tvNombre: TextView = itemView.findViewById(R.id.tvNombre)
-        val ivRest: ImageView = itemView.findViewById(R.id.ivRest)
+        val ivRestaurante: ImageView = itemView.findViewById(R.id.ivRestaurante)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -31,6 +31,6 @@ class RestauAdapter(private var lstRestau: List<RestauranteModel>): RecyclerView
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val itemRestau = lstRestau[position]
         holder.tvNombre.text = itemRestau.nombre
-        Picasso.get().load(itemRestau.imagrUrl).into(holder.ivRest)
+        Picasso.get().load(itemRestau.imageUrl).into(holder.ivRestaurante)
     }
 }
