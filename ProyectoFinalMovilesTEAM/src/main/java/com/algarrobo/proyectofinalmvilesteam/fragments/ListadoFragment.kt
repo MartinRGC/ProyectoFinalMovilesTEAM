@@ -24,38 +24,26 @@ class ListadoFragment : Fragment() {
         val view: View = inflater.inflate(R.layout.fragment_listado, container, false)
 
         val db = FirebaseFirestore.getInstance()
-        val lstRestau: ArrayList<RestauranteModel> = ArrayList()
+        var lstRestau: List<RestauranteModel>
         val rvRestau: RecyclerView = view.findViewById(R.id.rvRestau)
 
         db.collection("Restaurantes")
-            .addSnapshotListener{snapshots, e->
-
-                if(e!=null)
-                {
-                    Log.w("Firebase Warning","error",e)
+            .addSnapshotListener{snap, e->
+                if (e != null) {
+                    Log.i("ERROR", "Ocurrió un error")
                     return@addSnapshotListener
                 }
-                for(dc in snapshots!!.documentChanges){
-                    when(dc.type){
-                        DocumentChange.Type.ADDED -> {
-                            lstRestau.add(
-                                RestauranteModel(dc.document.data["imageUrl"].toString(),
-                                    dc.document.data["nombre"].toString()))
-                                rvRestau.adapter = RestauAdapter(lstRestau)
-                        }
-                        DocumentChange.Type.MODIFIED -> {
-                            RestauranteModel(dc.document.data["imageUrl"].toString(),
-                                dc.document.data["nombre"].toString())
-                            rvRestau.adapter = RestauAdapter(lstRestau)
-                        }
-                        DocumentChange.Type.REMOVED -> {
-                            Log.w("Firebase Warning", "REMOVED")
-                        }
-                    }
+
+                lstRestau = snap!!.documents.map { document ->
+                    RestauranteModel(
+                        document["imageUrl"].toString(),
+                        document["nombre"].toString()
+                    )
                 }
+
+                rvRestau.adapter = RestauAdapter(lstRestau)
                 rvRestau.layoutManager = LinearLayoutManager(requireContext())
             }
         return view
-        //uwu
     }
 }
