@@ -22,4 +22,7 @@ class PrincipalActivity : AppCompatActivity() {
     fun usuario(view: View){
         startActivity(Intent(this,UserActivity::class.java))
     }
+    fun restaurante(view: View){
+        startActivity(Intent(this,ListadoFragment::class.java))
+    }
 }
