@@ -13,8 +13,6 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="32dp"
         android:text="Hola!"
-        app:layout_constraintEnd_toStartOf="@+id/textView6"
-        app:layout_constraintHorizontal_bias="0.23"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,19 +21,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="280dp"
+        android:layout_marginEnd="260dp"
         android:text="Welcome"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="28dp"
         android:text="Que podemos hacer por ti?"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.127"
+        app:layout_constraintHorizontal_bias="0.115"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -53,8 +52,8 @@
         android:id="@+id/imageView7"
         android:layout_width="109dp"
         android:layout_height="97dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8"
         app:srcCompat="@drawable/rec_9" />
@@ -129,7 +128,7 @@
         android:id="@+id/imageView15"
         android:layout_width="112dp"
         android:layout_height="96dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView12"
@@ -216,18 +215,21 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="92dp"
         android:text="Mi cuenta"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8"
-        tools:layout_editor_absoluteX="31dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="355dp"
         android:layout_height="46dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:text="Direcciones"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
@@ -235,10 +237,10 @@
         android:id="@+id/button2"
         android:layout_width="354dp"
         android:layout_height="46dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text="Idioma"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
@@ -246,7 +248,7 @@
         android:id="@+id/button3"
         android:layout_width="353dp"
         android:layout_height="47dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text="Metodo de pagos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.482"
@@ -255,12 +257,12 @@
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="350dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="358dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="20dp"
         android:text="Eliminar cuenta"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.584"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button3" />
 
