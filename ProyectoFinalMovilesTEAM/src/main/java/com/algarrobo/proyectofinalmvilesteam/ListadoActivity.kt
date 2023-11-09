@@ -14,7 +14,7 @@ class ListadoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listado)
 
-        val rvRstaur = findViewById<RecyclerView>(R.id.rvRestaurantes)
+        val rvRstaur = findViewById<RecyclerView>(R.id.rvRestaurante)
 
         val db = FirebaseFirestore.getInstance()
         var lstRestau: List<RestauranteModel>

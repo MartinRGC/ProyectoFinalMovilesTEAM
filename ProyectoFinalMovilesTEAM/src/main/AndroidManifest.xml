@@ -28,8 +28,9 @@
             android:name=".ListadoActivity"
             android:exported="false" />
         <activity
-            android:name=".fragments.ListadoFragment"
+            android:name=".ListadoFarmActivity"
             android:exported="false" />
+
         <activity
             android:name=".UserActivity"
             android:exported="false" />
