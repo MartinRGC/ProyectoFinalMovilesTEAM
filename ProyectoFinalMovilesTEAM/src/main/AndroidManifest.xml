@@ -33,6 +33,12 @@
         <activity
             android:name=".ListadoTiendasActivity"
             android:exported="false" />
+        <activity
+            android:name=".ListadoTiendaCActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListadoVeterinariaActivity"
+            android:exported="false" />
 
         <activity
             android:name=".UserActivity"

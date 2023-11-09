@@ -24,4 +24,10 @@ class PrincipalActivity : AppCompatActivity() {
     fun Tiendas(view: View){
         startActivity(Intent(this,ListadoTiendasActivity::class.java))
     }
+    fun TiendasC(view: View){
+        startActivity(Intent(this,ListadoTiendaCActivity::class.java))
+    }
+    fun Veterinaria(view: View){
+        startActivity(Intent(this,ListadoVeterinariaActivity::class.java))
+    }
 }

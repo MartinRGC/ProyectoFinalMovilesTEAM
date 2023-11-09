@@ -7,28 +7,29 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.algarrobo.proyectofinalmvilesteam.R
-import com.algarrobo.proyectofinalmvilesteam.models.TiendasModel
+import com.algarrobo.proyectofinalmvilesteam.models.CTiendasModel
+
 import com.squareup.picasso.Picasso
 
-class TiendasAdapter( private var lstTienda: List<TiendasModel>): RecyclerView.Adapter<TiendasAdapter.ViewHolder>() {
+class CTiendaAdapter( private var lstTiendaC: List<CTiendasModel>): RecyclerView.Adapter<CTiendaAdapter.ViewHolder>() {
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
     {
-        val tvNombre: TextView = itemView.findViewById(R.id.tvNombreT)
-        val ivTienda: ImageView = itemView.findViewById(R.id.ivTiendas)
+        val tvNombre: TextView = itemView.findViewById(R.id.tvNombreTC)
+        val ivTienda: ImageView = itemView.findViewById(R.id.ivTiendasC)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
-        return ViewHolder(layoutInflater.inflate(R.layout.item_tiend,parent,false))
+        return ViewHolder(layoutInflater.inflate(R.layout.item_tiendac,parent,false))
     }
 
     override fun getItemCount(): Int {
-        return lstTienda.size
+        return lstTiendaC.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val itemT = lstTienda[position]
-        holder.tvNombre.text = itemT.nombre
-        Picasso.get().load(itemT.imageUrl).into(holder.ivTienda)
+        val itemTiendC = lstTiendaC[position]
+        holder.tvNombre.text = itemTiendC.nombre
+        Picasso.get().load(itemTiendC.imageUrl).into(holder.ivTienda)
     }
-}
+    }
