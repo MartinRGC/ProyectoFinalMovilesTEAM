@@ -30,6 +30,9 @@
         <activity
             android:name=".ListadoFarmActivity"
             android:exported="false" />
+        <activity
+            android:name=".ListadoTiendasActivity"
+            android:exported="false" />
 
         <activity
             android:name=".UserActivity"
