@@ -80,7 +80,7 @@
         app:srcCompat="@drawable/rec_9" />
 
     <ImageView
-        android:id="@+id/imageView17"
+        android:id="@+id/imgAyuda"
         android:layout_width="61dp"
         android:layout_height="55dp"
         android:layout_marginStart="18dp"
@@ -145,7 +145,7 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView6"
         app:layout_constraintHorizontal_bias="0.592"
         app:layout_constraintStart_toStartOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/imageView17"
+        app:layout_constraintTop_toBottomOf="@+id/imgAyuda"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -223,7 +223,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView8" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnstart"
         android:layout_width="355dp"
         android:layout_height="46dp"
         android:layout_marginTop="32dp"
@@ -242,7 +242,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/btnstart" />
 
     <Button
         android:id="@+id/button3"

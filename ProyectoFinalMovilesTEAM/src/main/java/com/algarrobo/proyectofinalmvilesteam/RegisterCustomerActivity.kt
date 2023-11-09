@@ -7,7 +7,6 @@ import android.widget.Button
 import android.widget.EditText
 import com.algarrobo.proyectofinalmvilesteam.models.CustomerModel
 import com.google.android.material.snackbar.Snackbar
-import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
@@ -24,7 +23,7 @@ class RegisterCustomerActivity : AppCompatActivity() {
         val edtphonecustomer: EditText = findViewById(R.id.edtphonecustomer)
         val edtdatecustomer: EditText = findViewById(R.id.edtdatecustomer)
         val edtemailcustomer: EditText = findViewById(R.id.edtemailcustomer)
-        val btnsigncustomer: Button = findViewById(R.id.btnsigncustomer)
+        val btnsigncustomer: Button = findViewById(R.id.btnEnviar)
 
         val auth = FirebaseAuth.getInstance()
         val db = FirebaseFirestore.getInstance()

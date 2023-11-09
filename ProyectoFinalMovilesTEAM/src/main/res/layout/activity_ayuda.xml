@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AyudaActivity">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="121dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="32dp"
+        android:text="Ayuda"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.137"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView25"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView28"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.76"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/comen"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView28"
+        android:layout_width="353dp"
+        android:layout_height="591dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.214"
+        app:srcCompat="@drawable/rectangle14" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="208dp"
+        android:text="Problema 2"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="@+id/edtusercutomer"
+        app:layout_constraintTop_toTopOf="@+id/imageView28"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/edtusercutome"
+        android:layout_width="305dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="227dp"
+        android:background="@drawable/rectext1"
+        android:ems="10"
+        android:hint="    Detalle"
+        android:inputType="text"
+        android:textColor="#949494"
+        app:layout_constraintBottom_toTopOf="@+id/imageView33"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.292"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView33"
+        android:layout_width="358dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="22dp"
+        app:layout_constraintBottom_toTopOf="@+id/edtusercutomer"
+        app:layout_constraintEnd_toEndOf="@+id/imageView28"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView28"
+        app:layout_constraintTop_toBottomOf="@+id/edtusercutome"
+        app:srcCompat="@drawable/recta"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="108dp"
+        android:text="Problema 1"
+        app:layout_constraintEnd_toEndOf="@+id/textView8"
+        app:layout_constraintStart_toStartOf="@+id/edtusercutome"
+        app:layout_constraintTop_toTopOf="@+id/imageView28"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/edtusercutomer"
+        android:layout_width="305dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="57dp"
+        android:background="@drawable/rectext1"
+        android:ems="10"
+        android:hint="    Detalle"
+        android:inputType="text"
+        android:textColor="#949494"
+        app:layout_constraintBottom_toTopOf="@+id/edtusercuto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.377"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView33"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView30"
+        android:layout_width="322dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="128dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView28"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="@+id/imageView28"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:srcCompat="@drawable/recta"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="296dp"
+        android:text="Problema 3"
+        app:layout_constraintEnd_toEndOf="@+id/textView11"
+        app:layout_constraintStart_toStartOf="@+id/edtusercuto"
+        app:layout_constraintTop_toTopOf="@+id/imageView28"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/edtusercuto"
+        android:layout_width="305dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="57dp"
+        android:background="@drawable/rectext1"
+        android:ems="10"
+        android:hint="    Detalle"
+        android:inputType="text"
+        android:textColor="#949494"
+        app:layout_constraintBottom_toTopOf="@+id/edtusercut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.377"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtusercutomer"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView36"
+        android:layout_width="322dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="216dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView28"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="@+id/imageView28"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:srcCompat="@drawable/recta"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="384dp"
+        android:layout_marginEnd="9dp"
+        android:text="Problema 4"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/imageView36"
+        app:layout_constraintTop_toTopOf="@+id/imageView28"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/edtusercut"
+        android:layout_width="305dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="106dp"
+        android:background="@drawable/rectext1"
+        android:ems="10"
+        android:hint="    Detalle"
+        android:inputType="text"
+        android:textColor="#949494"
+        app:layout_constraintBottom_toTopOf="@+id/btnstart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.377"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtusercuto"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView38"
+        android:layout_width="322dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="304dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView28"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="@+id/imageView28"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:srcCompat="@drawable/recta"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnstart"
+        android:layout_width="354dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="55dp"
+        android:text="AYUDA CON OTRO PROBLEMA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.263"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtusercut"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

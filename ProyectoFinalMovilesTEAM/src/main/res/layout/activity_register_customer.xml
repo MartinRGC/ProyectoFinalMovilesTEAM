@@ -34,7 +34,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnsigncustomer"
+        android:id="@+id/btnEnviar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="77dp"
@@ -71,7 +71,7 @@
         app:layout_constraintBottom_toTopOf="@+id/tvtermscon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnsigncustomer" />
+        app:layout_constraintTop_toBottomOf="@+id/btnEnviar" />
 
     <TextView
         android:id="@+id/tvtermscon"
@@ -110,7 +110,7 @@
         android:hint="    Email"
         android:inputType="text"
         android:textColor="#949494"
-        app:layout_constraintBottom_toTopOf="@+id/btnsigncustomer"
+        app:layout_constraintBottom_toTopOf="@+id/btnEnviar"
         app:layout_constraintStart_toStartOf="@+id/edtdatecustomer"
         app:layout_constraintTop_toBottomOf="@+id/edtdatecustomer" />
 

@@ -23,7 +23,7 @@ class RegisterSellerActivity : AppCompatActivity() {
         val txtPhoneSel: EditText = findViewById(R.id.edtphonecustomer)
         val txtDateofBirthSel: EditText = findViewById(R.id.edtdatecustomer)
         val txtEmailSel: EditText = findViewById(R.id.edtemailcustomer)
-        val btnSingupSel: Button = findViewById(R.id.btnsigncustomer)
+        val btnSingupSel: Button = findViewById(R.id.btnEnviar)
 
         val auth = FirebaseAuth.getInstance()
         val db = FirebaseFirestore.getInstance()

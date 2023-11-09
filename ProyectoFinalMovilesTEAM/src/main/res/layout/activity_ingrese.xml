@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IngreseActivity">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="385dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="169dp"
+        android:text="Ingrese sus datos para continuar"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/edtemailcustome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.807"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/edtemailcustomer"
+        android:layout_width="392dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/rectext1"
+        android:ems="10"
+        android:hint="    Nombre"
+        android:inputType="text"
+        android:textColor="#949494"
+        app:layout_constraintBottom_toTopOf="@+id/edtemailcustome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.36"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/edtemailcustome"
+        android:layout_width="386dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rectext1"
+        android:ems="10"
+        android:hint="    Apellido"
+        android:inputType="text"
+        android:textColor="#949494"
+        app:layout_constraintBottom_toTopOf="@+id/edtemailcustom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/edtemailcustom"
+        android:layout_width="385dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="38dp"
+        android:background="@drawable/rectext1"
+        android:ems="10"
+        android:hint="    Correo"
+        android:inputType="text"
+        android:textColor="#949494"
+        app:layout_constraintBottom_toTopOf="@+id/edtemailcusto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtemailcustome"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/edtemailcusto"
+        android:layout_width="387dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="197dp"
+        android:background="@drawable/rectext1"
+        android:ems="10"
+        android:hint="    Numero"
+        android:inputType="text"
+        android:textColor="#949494"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtemailcustom"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnContnr"
+        android:layout_width="339dp"
+        android:layout_height="60dp"
+        android:background="#0000FF"
+        android:text="CONTINUAR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.383"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtemailcusto"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
