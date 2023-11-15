@@ -44,10 +44,10 @@
         android:text="REGISTRARSE"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/tvcondcon"
-        app:layout_constraintEnd_toEndOf="@+id/edtemailcustomer"
+        app:layout_constraintEnd_toEndOf="@+id/btnlistusuarios"
         app:layout_constraintHorizontal_bias="0.606"
         app:layout_constraintStart_toStartOf="@+id/tvcondcon"
-        app:layout_constraintTop_toBottomOf="@+id/edtemailcustomer" />
+        app:layout_constraintTop_toBottomOf="@+id/btnlistusuarios" />
 
     <TextView
         android:id="@+id/tvsignupcon"
@@ -101,7 +101,7 @@
         app:layout_constraintTop_toBottomOf="@+id/edtpsswcustomer" />
 
     <EditText
-        android:id="@+id/edtemailcustomer"
+        android:id="@+id/btnlistusuarios"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
@@ -139,7 +139,7 @@
         android:hint="    Fecha de nacimiento"
         android:inputType="text"
         android:textColor="#949494"
-        app:layout_constraintBottom_toTopOf="@+id/edtemailcustomer"
+        app:layout_constraintBottom_toTopOf="@+id/btnlistusuarios"
         app:layout_constraintStart_toStartOf="@+id/edtphonecustomer"
         app:layout_constraintTop_toBottomOf="@+id/edtphonecustomer" />
 

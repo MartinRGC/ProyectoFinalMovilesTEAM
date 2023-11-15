@@ -13,6 +13,33 @@
         android:theme="@style/Theme.ProyectoFinalMóvilesTEAM"
         tools:targetApi="31">
         <activity
+            android:name=".RrepartidoresActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FormularioActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RepartidoresActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EstadisticasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListapedidosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListatiendasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListaRestaurantesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListausuariosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Menu_principalActivity"
+            android:exported="false" />
+        <activity
             android:name=".EnvioActivity"
             android:exported="false" />
 
@@ -22,13 +49,7 @@
 
         <activity
             android:name=".MapActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".ContiniuActivity"
             android:exported="false" />
@@ -73,7 +94,13 @@
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="false"

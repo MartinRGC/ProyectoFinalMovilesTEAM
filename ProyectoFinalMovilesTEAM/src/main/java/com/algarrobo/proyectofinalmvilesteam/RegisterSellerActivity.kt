@@ -19,10 +19,10 @@ class RegisterSellerActivity : AppCompatActivity() {
         val btnCustomerSel: Button = findViewById(R.id.bncustomer)
         val btnSellerSe: Button = findViewById(R.id.btnsel)
         val txtRUC: EditText = findViewById(R.id.edtusercutomer)
-        val txtPasswordSel: EditText = findViewById(R.id.edtemailcustomer)
+        val txtPasswordSel: EditText = findViewById(R.id.btnlistusuarios)
         val txtPhoneSel: EditText = findViewById(R.id.edtphonecustomer)
         val txtDateofBirthSel: EditText = findViewById(R.id.edtdatecustomer)
-        val txtEmailSel: EditText = findViewById(R.id.edtemailcustomer)
+        val txtEmailSel: EditText = findViewById(R.id.btnlistusuarios)
         val btnSingupSel: Button = findViewById(R.id.btnEnviar)
 
         val auth = FirebaseAuth.getInstance()

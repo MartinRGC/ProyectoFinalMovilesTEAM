@@ -14,7 +14,7 @@
         android:layout_marginBottom="169dp"
         android:text="Ingrese sus datos para continuar"
         android:textSize="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/edtemailcustome"
+        app:layout_constraintBottom_toTopOf="@+id/btnlistrest"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.807"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/edtemailcustomer"
+        android:id="@+id/btnlistusuarios"
         android:layout_width="392dp"
         android:layout_height="77dp"
         android:layout_marginTop="72dp"
@@ -31,7 +31,7 @@
         android:hint="    Nombre"
         android:inputType="text"
         android:textColor="#949494"
-        app:layout_constraintBottom_toTopOf="@+id/edtemailcustome"
+        app:layout_constraintBottom_toTopOf="@+id/btnlistrest"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,7 +40,7 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/edtemailcustome"
+        android:id="@+id/btnlistrest"
         android:layout_width="386dp"
         android:layout_height="0dp"
         android:layout_marginBottom="16dp"
@@ -49,7 +49,7 @@
         android:hint="    Apellido"
         android:inputType="text"
         android:textColor="#949494"
-        app:layout_constraintBottom_toTopOf="@+id/edtemailcustom"
+        app:layout_constraintBottom_toTopOf="@+id/btnlisttiendas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.36"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,7 +57,7 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/edtemailcustom"
+        android:id="@+id/btnlisttiendas"
         android:layout_width="385dp"
         android:layout_height="0dp"
         android:layout_marginBottom="38dp"
@@ -66,14 +66,14 @@
         android:hint="    Correo"
         android:inputType="text"
         android:textColor="#949494"
-        app:layout_constraintBottom_toTopOf="@+id/edtemailcusto"
+        app:layout_constraintBottom_toTopOf="@+id/btnlistpeddos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtemailcustome"
+        app:layout_constraintTop_toBottomOf="@+id/btnlistrest"
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/edtemailcusto"
+        android:id="@+id/btnlistpeddos"
         android:layout_width="387dp"
         android:layout_height="0dp"
         android:layout_marginBottom="197dp"
@@ -86,7 +86,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtemailcustom"
+        app:layout_constraintTop_toBottomOf="@+id/btnlisttiendas"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -99,7 +99,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.383"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtemailcusto"
+        app:layout_constraintTop_toBottomOf="@+id/btnlistpeddos"
         tools:ignore="MissingConstraints" />
 
 

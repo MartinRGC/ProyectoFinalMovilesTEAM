@@ -22,7 +22,7 @@ class RegisterCustomerActivity : AppCompatActivity() {
         val edtpsswcustomer: EditText = findViewById(R.id.edtpsswcustomer)
         val edtphonecustomer: EditText = findViewById(R.id.edtphonecustomer)
         val edtdatecustomer: EditText = findViewById(R.id.edtdatecustomer)
-        val edtemailcustomer: EditText = findViewById(R.id.edtemailcustomer)
+        val edtemailcustomer: EditText = findViewById(R.id.btnlistusuarios)
         val btnsigncustomer: Button = findViewById(R.id.btnEnviar)
 
         val auth = FirebaseAuth.getInstance()
