@@ -29,6 +29,12 @@ class Menu_principalActivity : AppCompatActivity() {
             startActivity(Intent(this, ListausuariosActivity::class.java))
         }
 
+        val btnfinalizar: Button = findViewById(R.id.btnfinalizar)
+
+        btnfinalizar.setOnClickListener{
+            startActivity(Intent(this, LoginActivity::class.java))
+        }
+
 
 
 
