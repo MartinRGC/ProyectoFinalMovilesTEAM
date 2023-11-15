@@ -5,11 +5,14 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.algarrobo.proyectofinalmvilesteam.adapter.UserAdapter
+import com.google.firebase.firestore.FirebaseFirestore
 
 class ListausuariosActivity : AppCompatActivity() {
+    private val db = FirebaseFirestore.getInstance()
     @SuppressLint("WrongViewCast", "MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,21 +21,9 @@ class ListausuariosActivity : AppCompatActivity() {
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        val userList = listOf(
-            UserData("John", "Doe", "john.doe@example.com", "1234567890", "123 Main St"),
-            UserData("Pepa", "Smith", "jane.smith@example.com", "9876543210", "456 Oak St"),
-            UserData("Janeth", "Vargas", "jane.vargas@example.com", "9876543210", "456 Oak St"),
-            UserData("Julia", "Pacheco", "jl.pacheco@example.com", "9876543210", "456 Oak St"),
-            UserData("Mario", "Perez", "m.perez@example.com", "9876543210", "456 Oak St"),
-            UserData("Maya", "Rojas", "maya.rojas@example.com", "9876543210", "456 Oak St"),
-            UserData("Rosario", "Montoya", "ros.mntya@example.com", "9876543210", "456 Oak St"),
-            UserData("Pedro", "Reyes", "p.reyes@example.com", "9876543210", "456 Oak St"),
-            UserData("Juan", "Osorio", "juan.osorio@example.com", "9876543210", "456 Oak St"),
-            // Agrega más usuarios según sea necesario
-        )
-
-        val userAdapter = UserAdapter(userList)
+        val userAdapter = UserAdapter(emptyList()) // Inicializar con una lista vacía
         recyclerView.adapter = userAdapter
+
 
         val btnregre: Button = findViewById(R.id.btnregre)
 
@@ -40,5 +31,28 @@ class ListausuariosActivity : AppCompatActivity() {
             startActivity(Intent(this, Menu_principalActivity::class.java))
        }
 
+        // Obtener datos desde Firebase y actualizar el adaptador
+        obtenerUsuariosDesdeFirebase { userList ->
+            userAdapter.actualizarLista(userList)
+        }
+
+
+    }
+    private fun obtenerUsuariosDesdeFirebase(callback: (List<UserData>) -> Unit) {
+        db.collection("usuarios")
+            .get()
+            .addOnSuccessListener { result ->
+                val userList = result.map { document ->
+                    document.toObject(UserData::class.java)
+                }
+                callback(userList)
+            }
+            .addOnFailureListener { exception ->
+                // Manejar errores
+                callback(emptyList())
+            }
+        }
+    private fun showToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 }

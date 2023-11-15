@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.algarrobo.proyectofinalmvilesteam.R
 import com.algarrobo.proyectofinalmvilesteam.UserData
 
-class UserAdapter(private val userList: List<UserData>) :
+class UserAdapter(private var userList: List<UserData>) :
     RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
 
     class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -37,5 +37,9 @@ class UserAdapter(private val userList: List<UserData>) :
 
     override fun getItemCount(): Int {
         return userList.size
+    }
+    fun actualizarLista(nuevaLista: List<UserData>) {
+        userList = nuevaLista
+        notifyDataSetChanged()
     }
 }
