@@ -20,7 +20,14 @@ class ListausuariosActivity : AppCompatActivity() {
 
         val userList = listOf(
             UserData("John", "Doe", "john.doe@example.com", "1234567890", "123 Main St"),
-            UserData("Jane", "Smith", "jane.smith@example.com", "9876543210", "456 Oak St"),
+            UserData("Pepa", "Smith", "jane.smith@example.com", "9876543210", "456 Oak St"),
+            UserData("Janeth", "Vargas", "jane.vargas@example.com", "9876543210", "456 Oak St"),
+            UserData("Julia", "Pacheco", "jl.pacheco@example.com", "9876543210", "456 Oak St"),
+            UserData("Mario", "Perez", "m.perez@example.com", "9876543210", "456 Oak St"),
+            UserData("Maya", "Rojas", "maya.rojas@example.com", "9876543210", "456 Oak St"),
+            UserData("Rosario", "Montoya", "ros.mntya@example.com", "9876543210", "456 Oak St"),
+            UserData("Pedro", "Reyes", "p.reyes@example.com", "9876543210", "456 Oak St"),
+            UserData("Juan", "Osorio", "juan.osorio@example.com", "9876543210", "456 Oak St"),
             // Agrega más usuarios según sea necesario
         )
 
@@ -29,9 +36,9 @@ class ListausuariosActivity : AppCompatActivity() {
 
         val btnregre: Button = findViewById(R.id.btnregre)
 
-        btnregre.setOnClickListener{
+       btnregre.setOnClickListener{
             startActivity(Intent(this, Menu_principalActivity::class.java))
-        }
+       }
 
     }
 }
