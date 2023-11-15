@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -46,10 +47,14 @@ class ListausuariosActivity : AppCompatActivity() {
                     document.toObject(UserData::class.java)
                 }
                 callback(userList)
+
+                // Agrega un mensaje de registro para verificar si se obtienen datos
+                Log.d("ListausuariosActivity", "Usuarios obtenidos desde Firebase: $userList")
             }
             .addOnFailureListener { exception ->
                 // Manejar errores
                 callback(emptyList())
+                Log.e("ListausuariosActivity", "Error al obtener usuarios desde Firebase", exception)
             }
         }
     private fun showToast(message: String) {
