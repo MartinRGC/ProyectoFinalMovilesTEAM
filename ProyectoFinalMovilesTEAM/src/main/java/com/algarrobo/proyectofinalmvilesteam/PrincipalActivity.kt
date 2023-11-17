@@ -16,7 +16,7 @@ class PrincipalActivity : AppCompatActivity() {
     }
 
     fun restaurante(view: View){
-        startActivity(Intent(this,ListadoActivity::class.java))
+        startActivity(Intent(this,ListadoRestauActivity::class.java))
     }
     fun farmacia(view: View){
         startActivity(Intent(this,ListadoFarmActivity::class.java))
