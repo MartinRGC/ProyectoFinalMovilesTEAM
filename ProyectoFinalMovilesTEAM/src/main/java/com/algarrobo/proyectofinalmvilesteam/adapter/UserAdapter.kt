@@ -11,13 +11,6 @@ import com.algarrobo.proyectofinalmvilesteam.UserData
 class UserAdapter(private var userList: List<UserData>) :
     RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
 
-    class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val nombreTextView: TextView = itemView.findViewById(R.id.nombreTextView)
-        val apellidosTextView: TextView = itemView.findViewById(R.id.apellidosTextView)
-        val correoTextView: TextView = itemView.findViewById(R.id.correoTextView)
-        val celularTextView: TextView = itemView.findViewById(R.id.celularTextView)
-        val direccionTextView: TextView = itemView.findViewById(R.id.direccionTextView)
-    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
         val itemView = LayoutInflater.from(parent.context)
@@ -42,4 +35,12 @@ class UserAdapter(private var userList: List<UserData>) :
         userList = nuevaLista
         notifyDataSetChanged()
     }
+    inner class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val nombreTextView: TextView = itemView.findViewById(R.id.nombreTextView)
+        val apellidosTextView: TextView = itemView.findViewById(R.id.apellidosTextView)
+        val correoTextView: TextView = itemView.findViewById(R.id.correoTextView)
+        val celularTextView: TextView = itemView.findViewById(R.id.celularTextView)
+        val direccionTextView: TextView = itemView.findViewById(R.id.direccionTextView)
+    }
+
 }

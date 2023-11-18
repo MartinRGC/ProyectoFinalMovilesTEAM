@@ -35,9 +35,5 @@ class Menu_principalActivity : AppCompatActivity() {
             startActivity(Intent(this, LoginActivity::class.java))
         }
 
-
-
-
-
     }
 }
