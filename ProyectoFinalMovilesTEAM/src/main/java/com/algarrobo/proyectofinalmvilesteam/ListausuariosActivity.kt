@@ -4,12 +4,11 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.algarrobo.proyectofinalmvilesteam.adapter.UserAdapter
+import com.algarrobo.proyectofinalmvilesteam.models.UserModel
 import com.google.firebase.firestore.FirebaseFirestore
 
 class ListausuariosActivity : AppCompatActivity() {
@@ -39,12 +38,12 @@ class ListausuariosActivity : AppCompatActivity() {
         }
     }
 
-    private fun obtenerUsuariosDesdeFirebase(callback: (List<UserData>) -> Unit) {
+    private fun obtenerUsuariosDesdeFirebase(callback: (List<UserModel>) -> Unit) {
         db.collection("usuarios")
             .get()
             .addOnSuccessListener { result ->
                 val userList = result.map { document ->
-                    document.toObject(UserData::class.java)
+                    document.toObject(UserModel::class.java)
                 }
                 callback(userList)
             }

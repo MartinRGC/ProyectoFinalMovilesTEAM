@@ -183,6 +183,7 @@
         android:id="@+id/btnrrepartidores"
         android:layout_width="224dp"
         android:layout_height="53dp"
+        android:layout_marginTop="16dp"
         android:background="#462B9C"
         android:text="REGISTRO DE REPARTIDORES"
         android:textColor="#ffffff"
