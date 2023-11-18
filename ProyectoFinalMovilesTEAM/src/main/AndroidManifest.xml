@@ -63,7 +63,7 @@
             android:name=".HistorialPedidosActivity"
             android:exported="false" />
         <activity
-            android:name=".ListadoActivity"
+            android:name=".ListadoRestauActivity"
             android:exported="false" />
         <activity
             android:name=".ListadoFarmActivity"

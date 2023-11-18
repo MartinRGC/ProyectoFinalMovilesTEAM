@@ -9,10 +9,10 @@ import com.algarrobo.proyectofinalmvilesteam.fragments.adapter.RestauAdapter
 import com.algarrobo.proyectofinalmvilesteam.models.RestauranteModel
 import com.google.firebase.firestore.FirebaseFirestore
 
-class ListadoActivity : AppCompatActivity() {
+class ListadoRestauActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_listado)
+        setContentView(R.layout.activity_listadorestau)
 
         val rvRstaur = findViewById<RecyclerView>(R.id.rvRestaurante)
 
