@@ -41,11 +41,27 @@ class LoginActivity : AppCompatActivity() {
                                 ).show()
                             startActivity(Intent(this, PrincipalActivity::class.java))
                         }
+
+
+                        if (correo.endsWith("@seller.com")) {
+                            // Usuario administrador, dirigir al menú principal de administrador
+                            startActivity(Intent(this, PrincipalVendedorActivity::class.java))
+                        } else {
+                            // Usuario normal, dirigir al menú principal
+                            Snackbar
+                                .make(
+                                    findViewById(android.R.id.content),
+                                    "Vendedor validado",
+                                    Snackbar.LENGTH_LONG
+                                ).show()
+                            startActivity(Intent(this, MenuVendedorActivity::class.java))
+                        }
+
                     } else {
                         Snackbar
                             .make(
                                 findViewById(android.R.id.content),
-                                "Usuario no encontrado",
+                                "Vendedor no encontrado",
                                 Snackbar.LENGTH_LONG
                             ).show()
                         startActivity(Intent(this, LoginActivity::class.java))
