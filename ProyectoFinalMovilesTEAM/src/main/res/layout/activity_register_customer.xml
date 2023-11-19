@@ -14,12 +14,12 @@
         android:background="#462B9C"
         android:text="Cliente"
         android:textColor="@color/gray"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btnsel"
-        app:layout_constraintEnd_toStartOf="@+id/btnsel"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btncust"
+        app:layout_constraintEnd_toStartOf="@+id/btncust"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnsel"
+        android:id="@+id/btncust"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="49dp"
@@ -59,7 +59,7 @@
         android:textColor="#000000"
         app:layout_constraintBottom_toTopOf="@+id/edtusercutomer"
         app:layout_constraintStart_toStartOf="@+id/edtusercutomer"
-        app:layout_constraintTop_toBottomOf="@+id/btnsel" />
+        app:layout_constraintTop_toBottomOf="@+id/btncust" />
 
     <TextView
         android:id="@+id/tvcondcon"

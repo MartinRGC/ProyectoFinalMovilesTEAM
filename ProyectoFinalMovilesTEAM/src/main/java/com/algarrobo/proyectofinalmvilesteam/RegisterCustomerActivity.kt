@@ -17,7 +17,7 @@ class RegisterCustomerActivity : AppCompatActivity() {
         setContentView(R.layout.activity_register_customer)
 
         val  bncustomer: Button = findViewById(R.id.bncustomer)
-        val btnsel: Button = findViewById(R.id.btnsel)
+        val btnsel: Button = findViewById(R.id.btncust)
         val edtusercutomer: EditText = findViewById(R.id.edtusercutomer)
         val edtpsswcustomer: EditText = findViewById(R.id.edtpsswcustomer)
         val edtphonecustomer: EditText = findViewById(R.id.edtphonecustomer)
@@ -30,7 +30,7 @@ class RegisterCustomerActivity : AppCompatActivity() {
         val collectionRef = db.collection("Customers")
 
         btnsel.setOnClickListener{
-            startActivity(Intent(this, RegisterSellerActivity::class.java))
+            startActivity(Intent(this, SellerActivity::class.java))
         }
 
         bncustomer.setOnClickListener{
