@@ -91,10 +91,11 @@
 
     <Button
         android:id="@+id/btnContnr"
-        android:layout_width="339dp"
-        android:layout_height="60dp"
+        android:layout_width="204dp"
+        android:layout_height="52dp"
         android:background="#0000FF"
         android:text="CONTINUAR"
+        android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.383"
