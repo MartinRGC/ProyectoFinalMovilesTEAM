@@ -10,16 +10,27 @@ import com.algarrobo.proyectofinalmvilesteam.R
 import com.algarrobo.proyectofinalmvilesteam.models.VeterinariaModel
 import com.squareup.picasso.Picasso
 
-class VetAdapter( private var lstVeterinaria: List<VeterinariaModel>): RecyclerView.Adapter<VetAdapter.ViewHolder>() {
-    class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
-    {
+class VetAdapter(private var lstVeterinaria: List<VeterinariaModel>) :
+    RecyclerView.Adapter<VetAdapter.ViewHolder>() {
+
+    private var clickListener: OnVeterinariaClickListener? = null
+
+    interface OnVeterinariaClickListener {
+        fun onVeterinariaClick(veterinariaModel: VeterinariaModel)
+    }
+
+    fun setOnVeterinariaClickListener(listener: OnVeterinariaClickListener) {
+        this.clickListener = listener
+    }
+
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvNombre: TextView = itemView.findViewById(R.id.tvNombreV)
         val ivVeterinaria: ImageView = itemView.findViewById(R.id.ivVeterinaria)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
-        return ViewHolder(layoutInflater.inflate(R.layout.item_vete,parent,false))
+        return ViewHolder(layoutInflater.inflate(R.layout.item_vete, parent, false))
     }
 
     override fun getItemCount(): Int {
@@ -27,8 +38,12 @@ class VetAdapter( private var lstVeterinaria: List<VeterinariaModel>): RecyclerV
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val itemVet = lstVeterinaria[position]
-        holder.tvNombre.text = itemVet.nombre
-        Picasso.get().load(itemVet.imageUrl).into(holder.ivVeterinaria)
+        val itemV = lstVeterinaria[position]
+        holder.tvNombre.text = itemV.nombre
+        Picasso.get().load(itemV.imageUrl).into(holder.ivVeterinaria)
+
+        holder.itemView.setOnClickListener {
+            clickListener?.onVeterinariaClick(itemV)
+        }
     }
-    }
+}

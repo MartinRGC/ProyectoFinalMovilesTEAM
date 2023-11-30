@@ -1,5 +1,6 @@
 package com.algarrobo.proyectofinalmvilesteam.fragments.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,25 +11,40 @@ import com.algarrobo.proyectofinalmvilesteam.R
 import com.algarrobo.proyectofinalmvilesteam.models.FarmaModel
 import com.squareup.picasso.Picasso
 
-class  FarmaAdapter(private var lstFarm: List<FarmaModel>): RecyclerView.Adapter<FarmaAdapter.ViewHolder>() {
-    class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
-    {
+class FarmaAdapter(private var lstFarmacia: List<FarmaModel>) :
+    RecyclerView.Adapter<FarmaAdapter.ViewHolder>() {
+
+    private var clickListener: OnFarmaciaClickListener? = null
+
+    interface OnFarmaciaClickListener {
+        fun onFarmaciaClick(farmaciaModel: FarmaModel)
+    }
+
+    fun setOnFarmaciaClickListener(listener: OnFarmaciaClickListener) {
+        this.clickListener = listener
+    }
+
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvNombre: TextView = itemView.findViewById(R.id.tvNombreF)
         val ivFarmacia: ImageView = itemView.findViewById(R.id.ivFarmacia)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
-        return ViewHolder(layoutInflater.inflate(R.layout.item_farm,parent,false))
+        return ViewHolder(layoutInflater.inflate(R.layout.item_farm, parent, false))
     }
 
     override fun getItemCount(): Int {
-        return lstFarm.size
+        return lstFarmacia.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val itemFarm = lstFarm[position]
-        holder.tvNombre.text = itemFarm.nombre
-        Picasso.get().load(itemFarm.imageUrl).into(holder.ivFarmacia)
+        val itemF = lstFarmacia[position]
+        holder.tvNombre.text = itemF.nombre
+        Picasso.get().load(itemF.imageUrl).into(holder.ivFarmacia)
+
+        holder.itemView.setOnClickListener {
+            clickListener?.onFarmaciaClick(itemF)
+        }
     }
 }

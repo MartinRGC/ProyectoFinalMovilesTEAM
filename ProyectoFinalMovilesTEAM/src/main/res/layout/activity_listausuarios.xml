@@ -5,95 +5,118 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#628CB6"
-    tools:context=".ListausuariosActivity">
+    tools:context="ListausuariosActivity">
 
     <Button
         android:id="@+id/btnmenuprincipal"
-        android:layout_width="340dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="269dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginBottom="16dp"
         android:background="#0000FF"
         android:text="LISTA USUARIOS"
         android:textColor="#ffffff"
+        app:layout_constraintBottom_toTopOf="@+id/textView39"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_width="365dp"
-        android:layout_height="495dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnregre"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="146dp"
+        android:background="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnmenuprincipal"
+        app:layout_constraintTop_toBottomOf="@+id/textView35"
         tools:ignore="MissingConstraints"
         tools:listitem="@layout/recycler_view_item" />
 
     <Button
         android:id="@+id/btnregre"
-        android:layout_width="219dp"
-        android:layout_height="49dp"
-        android:layout_marginBottom="40dp"
+        android:layout_width="168dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="60dp"
         android:background="#6433FF"
         android:text="Regresar"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.53"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="ExtraText,MissingConstraints" />
 
     <TextView
         android:id="@+id/textView35"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="29dp"
         android:text="Nombre"
         android:textColor="#010005"
-        tools:layout_editor_absoluteX="21dp"
-        tools:layout_editor_absoluteY="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+        app:layout_constraintEnd_toStartOf="@+id/textView36"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnmenuprincipal"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView36"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:text="Apellidos"
         android:textColor="#010005"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="100dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView35"
+        app:layout_constraintEnd_toStartOf="@+id/textView37"
+        app:layout_constraintStart_toEndOf="@+id/textView35"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView37"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:text="Correo"
         android:textColor="#010005"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="100dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView36"
+        app:layout_constraintEnd_toStartOf="@+id/textView38"
+        app:layout_constraintStart_toEndOf="@+id/textView36"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView38"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="9dp"
         android:text="Celular"
         android:textColor="#010005"
-        tools:layout_editor_absoluteX="246dp"
-        tools:layout_editor_absoluteY="101dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView39"
+        app:layout_constraintStart_toEndOf="@+id/textView37"
+        app:layout_constraintTop_toBottomOf="@+id/btnmenuprincipal"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView39"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="7dp"
         android:text="Dirección"
         android:textColor="#010005"
-        tools:layout_editor_absoluteX="316dp"
-        tools:layout_editor_absoluteY="102dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView38"
+        app:layout_constraintTop_toTopOf="@+id/textView37"
         tools:ignore="MissingConstraints" />
 
 

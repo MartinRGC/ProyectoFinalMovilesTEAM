@@ -1,5 +1,7 @@
 package com.algarrobo.proyectofinalmvilesteam.models
 
+import java.io.Serializable
+
 data class SellerModel (
     val ruc: String ="",
     val contraseña: String="",
@@ -7,4 +9,4 @@ data class SellerModel (
     val fechanacimiento: String="",
     val email: String="",
     val UID: String= ""
-)
+): Serializable

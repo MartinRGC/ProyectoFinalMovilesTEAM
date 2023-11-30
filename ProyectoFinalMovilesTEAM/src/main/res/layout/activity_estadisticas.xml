@@ -16,7 +16,7 @@
         android:text="Ventas"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/imageView16"
-        app:layout_constraintEnd_toEndOf="@+id/btnregresar"
+        app:layout_constraintEnd_toEndOf="@+id/btnregresarse"
         app:layout_constraintStart_toStartOf="@+id/btnestsdgenrls"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
         tools:ignore="MissingConstraints" />
@@ -45,7 +45,7 @@
         android:text="N° Pedidos"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btnregresar"
+        app:layout_constraintEnd_toEndOf="@+id/btnregresarse"
         app:layout_constraintTop_toBottomOf="@+id/imageView17"
         tools:ignore="MissingConstraints" />
 
@@ -67,7 +67,7 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/btnregresar"
+        android:id="@+id/btnregresarse"
         android:layout_width="235dp"
         android:layout_height="51dp"
         android:background="#0000FF"

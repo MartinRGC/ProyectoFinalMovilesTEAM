@@ -1,25 +1,38 @@
 package com.algarrobo.proyectofinalmvilesteam.fragments.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.algarrobo.proyectofinalmvilesteam.DetTiendas
 import com.algarrobo.proyectofinalmvilesteam.R
 import com.algarrobo.proyectofinalmvilesteam.models.TiendasModel
 import com.squareup.picasso.Picasso
 
-class TiendasAdapter( private var lstTienda: List<TiendasModel>): RecyclerView.Adapter<TiendasAdapter.ViewHolder>() {
-    class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
-    {
+class TiendasAdapter(private var lstTienda: List<TiendasModel>) :
+    RecyclerView.Adapter<TiendasAdapter.ViewHolder>() {
+
+    private var clickListener: OnTiendaClickListener? = null
+
+    interface OnTiendaClickListener {
+        fun onTiendaClick(tiendaModel: TiendasModel)
+    }
+
+    fun setOnTiendaClickListener(listener: OnTiendaClickListener) {
+        this.clickListener = listener
+    }
+
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvNombre: TextView = itemView.findViewById(R.id.tvNombreT)
         val ivTienda: ImageView = itemView.findViewById(R.id.ivTiendas)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
-        return ViewHolder(layoutInflater.inflate(R.layout.item_tiend,parent,false))
+        return ViewHolder(layoutInflater.inflate(R.layout.item_tiend, parent, false))
     }
 
     override fun getItemCount(): Int {
@@ -30,5 +43,11 @@ class TiendasAdapter( private var lstTienda: List<TiendasModel>): RecyclerView.A
         val itemT = lstTienda[position]
         holder.tvNombre.text = itemT.nombre
         Picasso.get().load(itemT.imageUrl).into(holder.ivTienda)
+
+        holder.itemView.setOnClickListener {
+            val intent = Intent(holder.itemView.context, DetTiendas::class.java)
+            intent.putExtra("TIENDA_DETALLE", itemT)
+            holder.itemView.context.startActivity(intent)
+        }
     }
 }

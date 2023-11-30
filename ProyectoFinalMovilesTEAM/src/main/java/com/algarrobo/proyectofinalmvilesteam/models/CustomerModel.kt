@@ -1,5 +1,7 @@
 package com.algarrobo.proyectofinalmvilesteam.models
 
+import java.io.Serializable
+
 data class CustomerModel (
     val user: String ="",
     val password: String="",
@@ -9,4 +11,4 @@ data class CustomerModel (
     val UID: String= ""
 
 
-)
+): Serializable

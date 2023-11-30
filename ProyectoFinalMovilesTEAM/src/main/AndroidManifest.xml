@@ -13,14 +13,6 @@
         android:theme="@style/Theme.ProyectoFinalMóvilesTEAM"
         tools:targetApi="31">
         <activity
-            android:name=".PrincipalVendedorActivity"
-            android:exported="false"
-            android:label="@string/title_activity_principal_vendedor"
-            android:theme="@style/Theme.ProyectoFinalMóvilesTEAM.NoActionBar" />
-        <activity
-            android:name=".MenuVendedorActivity"
-            android:exported="false" />
-        <activity
             android:name=".SellerActivity"
             android:exported="false" />
         <activity
@@ -33,7 +25,22 @@
             android:name=".RepartidoresActivity"
             android:exported="false" />
         <activity
+            android:name=".DetTiendaC"
+            android:exported="false" />
+        <activity
             android:name=".EstadisticasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetTiendas"
+            android:exported="false" />
+        <activity
+            android:name=".DetVeterinaria"
+            android:exported="false" />
+        <activity
+            android:name=".DetRestaurante"
+            android:exported="false" />
+        <activity
+            android:name=".DetFarmacia"
             android:exported="false" />
         <activity
             android:name=".ListapedidosActivity"
@@ -94,9 +101,7 @@
         <activity
             android:name=".PrincipalActivity"
             android:exported="false" />
-        <activity
-            android:name=".RegisterSellerActivity"
-            android:exported="false" />
+
         <activity
             android:name=".RegisterCustomerActivity"
             android:exported="false" />

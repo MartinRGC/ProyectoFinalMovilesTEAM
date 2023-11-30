@@ -35,5 +35,21 @@ class Menu_principalActivity : AppCompatActivity() {
             startActivity(Intent(this, LoginActivity::class.java))
         }
 
+        listatiendas.setOnClickListener{
+            startActivity(Intent(this, ListatiendasActivity::class.java))
+        }
+        listarestaurantes.setOnClickListener{
+            startActivity(Intent(this, ListaRestaurantesActivity::class.java))
+        }
+        listapedidos.setOnClickListener{
+            startActivity(Intent(this, ListapedidosActivity::class.java))
+        }
+        listarepartidores.setOnClickListener{
+            startActivity(Intent(this, RepartidoresActivity::class.java))
+        }
+        listaestadisticasgenerales.setOnClickListener{
+            startActivity(Intent(this, EstadisticasActivity::class.java))
+        }
+
     }
 }
