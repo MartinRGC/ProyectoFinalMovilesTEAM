@@ -1,5 +1,6 @@
 package com.algarrobo.proyectofinalmvilesteam
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -9,7 +10,8 @@ import com.algarrobo.proyectofinalmvilesteam.fragments.adapter.TiendasAdapter
 import com.algarrobo.proyectofinalmvilesteam.models.TiendasModel
 import com.google.firebase.firestore.FirebaseFirestore
 
-class ListadoTiendasActivity: AppCompatActivity()  {
+class ListadoTiendasActivity : AppCompatActivity(), TiendasAdapter.OnTiendaClickListener {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listadotien)
@@ -20,8 +22,8 @@ class ListadoTiendasActivity: AppCompatActivity()  {
         var lstTiend: List<TiendasModel>
 
         db.collection("Tiendas")
-            .addSnapshotListener{snap, e->
-                if(e != null){
+            .addSnapshotListener { snap, e ->
+                if (e != null) {
                     Log.i("ERROR", "Ocurrió un error")
                     return@addSnapshotListener
                 }
@@ -33,10 +35,16 @@ class ListadoTiendasActivity: AppCompatActivity()  {
                     )
                 }
 
-                rvTiend.adapter = TiendasAdapter(lstTiend)
+                val adapter = TiendasAdapter(lstTiend)
+                adapter.setOnTiendaClickListener(this)
+                rvTiend.adapter = adapter
                 rvTiend.layoutManager = LinearLayoutManager(this)
-
             }
     }
-
+    override fun onTiendaClick(tiendaModel: TiendasModel) {
+        Log.d("CLICK", "Item clicked: ${tiendaModel.nombre}") // Agregar este Log para verificar si se activa al hacer clic
+        val intent = Intent(this, DetTiendas::class.java)
+        intent.putExtra("TIENDA_DETALLE", tiendaModel)
+        startActivity(intent)
+    }
 }

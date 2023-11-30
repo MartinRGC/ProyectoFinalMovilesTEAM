@@ -7,13 +7,13 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.algarrobo.proyectofinalmvilesteam.adapter.TiendasAdapter
+import com.algarrobo.proyectofinalmvilesteam.adapter.TiendAdapter
 import com.algarrobo.proyectofinalmvilesteam.models.LTiendasModel
 import com.google.firebase.firestore.FirebaseFirestore
 
 class ListatiendasActivity : AppCompatActivity() {
     private val db = FirebaseFirestore.getInstance()
-    private lateinit var tiendasAdapter: TiendasAdapter
+    private lateinit var tiendasAdapter: TiendAdapter
 
     @SuppressLint("WrongViewCast", "MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +23,7 @@ class ListatiendasActivity : AppCompatActivity() {
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView3)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        tiendasAdapter = TiendasAdapter(emptyList()) // Inicializar con una lista vacía
+        tiendasAdapter = TiendAdapter(emptyList()) // Inicializar con una lista vacía
         recyclerView.adapter = tiendasAdapter
 
         val btnListTiendas: Button = findViewById(R.id.btnlistiendas)

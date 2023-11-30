@@ -1,5 +1,6 @@
 package com.algarrobo.proyectofinalmvilesteam
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -9,34 +10,42 @@ import com.algarrobo.proyectofinalmvilesteam.fragments.adapter.VetAdapter
 import com.algarrobo.proyectofinalmvilesteam.models.VeterinariaModel
 import com.google.firebase.firestore.FirebaseFirestore
 
-class ListadoVeterinariaActivity: AppCompatActivity()  {
+class ListadoVeterinariaActivity : AppCompatActivity(), VetAdapter.OnVeterinariaClickListener {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listadovet)
 
-        val rvVet = findViewById<RecyclerView>(R.id.rvVeterinaria)
+        val rvVeterinarias = findViewById<RecyclerView>(R.id.rvVeterinaria)
+        rvVeterinarias.layoutManager = LinearLayoutManager(this)
 
         val db = FirebaseFirestore.getInstance()
-        var lstVet: List<VeterinariaModel>
 
         db.collection("Veterinarias")
-            .addSnapshotListener{snap, e->
-                if(e != null){
+            .addSnapshotListener { snap, e ->
+                if (e != null) {
                     Log.i("ERROR", "Ocurrió un error")
                     return@addSnapshotListener
                 }
 
-                lstVet = snap!!.documents.map { document ->
+                val listaVeterinarias = snap?.documents?.mapNotNull { document ->
                     VeterinariaModel(
-                        document["imageUrl"].toString(),
-                        document["nombre"].toString()
+                        document.getString("imageUrl") ?: "",
+                        document.getString("nombre") ?: ""
                     )
                 }
 
-                rvVet.adapter = VetAdapter(lstVet)
-                rvVet.layoutManager = LinearLayoutManager(this)
-
+                if (listaVeterinarias != null) {
+                    val adaptador = VetAdapter(listaVeterinarias)
+                    adaptador.setOnVeterinariaClickListener(this)
+                    rvVeterinarias.adapter = adaptador
+                }
             }
     }
 
+    override fun onVeterinariaClick(veterinariaModel: VeterinariaModel) {
+        val intent = Intent(this, DetVeterinaria::class.java)
+        intent.putExtra("VETERINARIA_DETALLE", veterinariaModel)
+        startActivity(intent)
+    }
 }

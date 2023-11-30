@@ -25,7 +25,22 @@
             android:name=".RepartidoresActivity"
             android:exported="false" />
         <activity
+            android:name=".DetTiendaC"
+            android:exported="false" />
+        <activity
             android:name=".EstadisticasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetTiendas"
+            android:exported="false" />
+        <activity
+            android:name=".DetVeterinaria"
+            android:exported="false" />
+        <activity
+            android:name=".DetRestaurante"
+            android:exported="false" />
+        <activity
+            android:name=".DetFarmacia"
             android:exported="false" />
         <activity
             android:name=".ListapedidosActivity"
@@ -86,9 +101,7 @@
         <activity
             android:name=".PrincipalActivity"
             android:exported="false" />
-        <activity
-            android:name=".RegisterSellerActivity"
-            android:exported="false" />
+
         <activity
             android:name=".RegisterCustomerActivity"
             android:exported="false" />

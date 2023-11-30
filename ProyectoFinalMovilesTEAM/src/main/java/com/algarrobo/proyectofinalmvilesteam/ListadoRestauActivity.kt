@@ -1,5 +1,6 @@
 package com.algarrobo.proyectofinalmvilesteam
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -9,33 +10,42 @@ import com.algarrobo.proyectofinalmvilesteam.fragments.adapter.RestauAdapter
 import com.algarrobo.proyectofinalmvilesteam.models.RestauranteModel
 import com.google.firebase.firestore.FirebaseFirestore
 
-class ListadoRestauActivity : AppCompatActivity() {
+class ListadoRestauActivity: AppCompatActivity(), RestauAdapter.OnRestauranteClickListener {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listadorestau)
 
-        val rvRstaur = findViewById<RecyclerView>(R.id.rvRestaurante)
+        val rvRestaurantes = findViewById<RecyclerView>(R.id.rvRestaurante)
+        rvRestaurantes.layoutManager = LinearLayoutManager(this)
 
         val db = FirebaseFirestore.getInstance()
-        var lstRestau: List<RestauranteModel>
 
         db.collection("Restaurantes")
-            .addSnapshotListener{snap, e->
-            if(e != null){
-                Log.i("ERROR", "Ocurrió un error")
-                return@addSnapshotListener
-            }
+            .addSnapshotListener { snap, e ->
+                if (e != null) {
+                    Log.i("ERROR", "Ocurrió un error")
+                    return@addSnapshotListener
+                }
 
-                lstRestau = snap!!.documents.map { document ->
+                val listaRestaurantes = snap?.documents?.mapNotNull { document ->
                     RestauranteModel(
-                        document["imageUrl"].toString(),
-                        document["nombre"].toString()
+                        document.getString("imageUrl") ?: "",
+                        document.getString("nombre") ?: ""
                     )
                 }
 
-                rvRstaur.adapter = RestauAdapter(lstRestau)
-                rvRstaur.layoutManager = LinearLayoutManager(this)
-
+                if (listaRestaurantes != null) {
+                    val adaptador = RestauAdapter(listaRestaurantes)
+                    adaptador.setOnRestauranteClickListener(this)
+                    rvRestaurantes.adapter = adaptador
+                }
             }
+    }
+
+    override fun onRestauranteClick(restauranteModel: RestauranteModel) {
+        val intent = Intent(this, DetRestaurante::class.java)
+        intent.putExtra("RESTAURANTE_DETALLE", restauranteModel)
+        startActivity(intent)
     }
 }

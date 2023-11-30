@@ -8,8 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.algarrobo.proyectofinalmvilesteam.R
 import com.algarrobo.proyectofinalmvilesteam.models.LTiendasModel
 
-class TiendasAdapter (private var tiendasList: List<LTiendasModel>) :
-    RecyclerView.Adapter<TiendasAdapter.TiendasViewHolder>() {
+class TiendAdapter (private var tiendasList: List<LTiendasModel>) :
+    RecyclerView.Adapter<TiendAdapter.TiendasViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TiendasViewHolder {
         val itemView = LayoutInflater.from(parent.context)

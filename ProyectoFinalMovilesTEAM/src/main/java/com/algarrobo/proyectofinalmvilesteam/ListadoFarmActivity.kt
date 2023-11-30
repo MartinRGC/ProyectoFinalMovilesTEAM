@@ -1,44 +1,51 @@
 package com.algarrobo.proyectofinalmvilesteam
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.algarrobo.proyectofinalmvilesteam.fragments.adapter.FarmaAdapter
-import com.algarrobo.proyectofinalmvilesteam.fragments.adapter.RestauAdapter
 import com.algarrobo.proyectofinalmvilesteam.models.FarmaModel
-import com.algarrobo.proyectofinalmvilesteam.models.RestauranteModel
 import com.google.firebase.firestore.FirebaseFirestore
 
-class ListadoFarmActivity:AppCompatActivity()  {
+class ListadoFarmActivity : AppCompatActivity(), FarmaAdapter.OnFarmaciaClickListener {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listadofarm)
 
-        val rvFarm = findViewById<RecyclerView>(R.id.rvFarmacia)
+        val rvFarmacias = findViewById<RecyclerView>(R.id.rvFarmacia)
+        rvFarmacias.layoutManager = LinearLayoutManager(this)
 
         val db = FirebaseFirestore.getInstance()
-        var lstFarm: List<FarmaModel>
 
         db.collection("Farmacias")
-            .addSnapshotListener{snap, e->
-                if(e != null){
+            .addSnapshotListener { snap, e ->
+                if (e != null) {
                     Log.i("ERROR", "Ocurrió un error")
                     return@addSnapshotListener
                 }
 
-                lstFarm = snap!!.documents.map { document ->
+                val listaFarmacias = snap?.documents?.mapNotNull { document ->
                     FarmaModel(
-                        document["imageUrl"].toString(),
-                        document["nombre"].toString()
+                        document.getString("imageUrl") ?: "",
+                        document.getString("nombre") ?: ""
                     )
                 }
 
-                rvFarm.adapter = FarmaAdapter(lstFarm)
-                rvFarm.layoutManager = LinearLayoutManager(this)
-
+                if (listaFarmacias != null) {
+                    val adaptador = FarmaAdapter(listaFarmacias)
+                    adaptador.setOnFarmaciaClickListener(this)
+                    rvFarmacias.adapter = adaptador
+                }
             }
     }
 
+    override fun onFarmaciaClick(farmaciaModel: FarmaModel) {
+        val intent = Intent(this, DetFarmacia::class.java)
+        intent.putExtra("FARMACIA_DETALLE", farmaciaModel)
+        startActivity(intent)
     }
+}
