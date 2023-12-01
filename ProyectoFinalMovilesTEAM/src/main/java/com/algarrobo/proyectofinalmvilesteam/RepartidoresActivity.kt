@@ -38,6 +38,12 @@ class RepartidoresActivity : AppCompatActivity() {
         btnRegreRepar.setOnClickListener {
             startActivity(Intent(this, Menu_principalActivity::class.java))
         }
+
+        val btnNuevoRepar: Button = findViewById(R.id.btnnvrepartidor)
+
+        btnNuevoRepar.setOnClickListener {
+            startActivity(Intent(this, RrepartidoresActivity::class.java))
+        }
     }
     private fun obtenerRepartiDesdeFirebase(callback: (List<LRepartidorModel>) -> Unit) {
         db.collection("repartidores")
