@@ -30,27 +30,15 @@ class LoginActivity : AppCompatActivity() {
                         // Verificar si el usuario es administrador
                         if (correo.endsWith("@admin.com")) {
                             startActivity(Intent(this, Menu_principalActivity::class.java))
-                        } else if (correo.endsWith("@seller.com")) {
-                            // Verificar si el usuario es vendedor
-                            startActivity(Intent(this, PrincipalVendedorActivity::class.java))
                         } else {
-                            // Usuario normal, dirigir al menú principal
                             Snackbar
                                 .make(
                                     findViewById(android.R.id.content),
-                                    "Usuario validado",
+                                    "Credenciales incorrectas",
                                     Snackbar.LENGTH_LONG
                                 ).show()
-                            startActivity(Intent(this, PrincipalActivity::class.java))
-                        }
-                    } else {
-                        Snackbar
-                            .make(
-                                findViewById(android.R.id.content),
-                                "Credenciales incorrectas",
-                                Snackbar.LENGTH_LONG
-                            ).show()
 
+                        }
                     }
                 }
         }
