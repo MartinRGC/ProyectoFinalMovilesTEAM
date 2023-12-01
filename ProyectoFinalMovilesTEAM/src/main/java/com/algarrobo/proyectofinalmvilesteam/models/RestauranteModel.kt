@@ -7,7 +7,7 @@ data class RestauranteModel(
     val nombre: String="",
     val puntuacion:String="",
     val tiempo:String="",
-    val idrestaurante:String="",
+    val id:String="",
     val Name:String="",
     val IMAGE:String=""
 

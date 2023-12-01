@@ -33,7 +33,8 @@ class ListadoTiendasActivity : AppCompatActivity(), TiendasAdapter.OnTiendaClick
                         document.getString("imageUrl") ?: "",
                         document.getString("nombre") ?: "",
                         document.getString("puntuacion") ?: "",
-                        document.getString("tiempo") ?: ""
+                        document.getString("tiempo") ?: "",
+                        document.getString("id") ?: "",
                     )
                 }
 
@@ -43,10 +44,9 @@ class ListadoTiendasActivity : AppCompatActivity(), TiendasAdapter.OnTiendaClick
                 rvTiend.layoutManager = LinearLayoutManager(this)
             }
     }
-    override fun onTiendaClick(tiendaModel: TiendasModel) {
-        Log.d("CLICK", "Item clicked: ${tiendaModel.nombre}") // Agregar este Log para verificar si se activa al hacer clic
+    override fun onTiendaClick(IDT: String) {
         val intent = Intent(this, DetTiendas::class.java)
-        intent.putExtra("TIENDA_DETALLE", tiendaModel)
+        intent.putExtra("TIENDAS_ID", IDT)
         startActivity(intent)
     }
 }

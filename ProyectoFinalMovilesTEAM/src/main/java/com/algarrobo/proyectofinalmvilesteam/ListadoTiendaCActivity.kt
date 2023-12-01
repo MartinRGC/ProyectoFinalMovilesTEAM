@@ -34,7 +34,8 @@ class ListadoTiendaCActivity : AppCompatActivity(), CTiendaAdapter.OnTiendaCClic
                         document.getString("imageUrl") ?: "",
                         document.getString("nombre") ?: "",
                         document.getString("puntuacion") ?: "",
-                        document.getString("tiempo") ?: ""
+                        document.getString("tiempo") ?: "",
+                        document.getString("id") ?: "",
                     )
                 }
 
@@ -46,9 +47,9 @@ class ListadoTiendaCActivity : AppCompatActivity(), CTiendaAdapter.OnTiendaCClic
             }
     }
 
-    override fun onTiendaCClick(tiendaCModel: CTiendasModel) {
+    override fun onTiendaCClick(IDTC: String) {
         val intent = Intent(this, DetTiendaC::class.java)
-        intent.putExtra("TIENDAC_DETALLE", tiendaCModel)
+        intent.putExtra("TIENDAC_ID", IDTC)
         startActivity(intent)
     }
 }

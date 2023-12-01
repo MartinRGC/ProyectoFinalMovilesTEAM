@@ -16,7 +16,7 @@ class VetAdapter(private var lstVeterinaria: List<VeterinariaModel>) :
     private var clickListener: OnVeterinariaClickListener? = null
 
     interface OnVeterinariaClickListener {
-        fun onVeterinariaClick(veterinariaModel: VeterinariaModel)
+        fun onVeterinariaClick(veterinariaModel: String)
     }
 
     fun setOnVeterinariaClickListener(listener: OnVeterinariaClickListener) {
@@ -41,13 +41,14 @@ class VetAdapter(private var lstVeterinaria: List<VeterinariaModel>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val itemV = lstVeterinaria[position]
+        var IDV = itemV.id
         holder.tvNombre.text = itemV.nombre
         holder.tvPuntuacion.text=itemV.puntuacion
         holder.tvTiempo.text=itemV.tiempo
         Picasso.get().load(itemV.imageUrl).into(holder.ivVeterinaria)
 
         holder.itemView.setOnClickListener {
-            clickListener?.onVeterinariaClick(itemV)
+            clickListener?.onVeterinariaClick(IDV) // Pasar solo el ID del restaurante
         }
     }
 }

@@ -21,55 +21,26 @@ class LoginActivity : AppCompatActivity() {
         val btnRegister: Button = findViewById(R.id.btnRegister)
 
         btnLogin.setOnClickListener {
-
-            var correo: String = edtemail.text.toString()
-            var clave: String = edtpassw.text.toString()
+            val correo: String = edtemail.text.toString()
+            val clave: String = edtpassw.text.toString()
 
             auth.signInWithEmailAndPassword(correo, clave)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
+                        // Verificar si el usuario es administrador
                         if (correo.endsWith("@admin.com")) {
-                            // Usuario administrador, dirigir al menú principal de administrador
                             startActivity(Intent(this, Menu_principalActivity::class.java))
                         } else {
-                            // Usuario normal, dirigir al menú principal
                             Snackbar
                                 .make(
                                     findViewById(android.R.id.content),
-                                    "Usuario validado",
+                                    "Credenciales incorrectas",
                                     Snackbar.LENGTH_LONG
                                 ).show()
-                            startActivity(Intent(this, PrincipalActivity::class.java))
+
                         }
-
-
-                        if (correo.endsWith("@seller.com")) {
-                            // Usuario administrador, dirigir al menú principal de administrador
-                            startActivity(Intent(this, PrincipalVendedorActivity::class.java))
-                        } else {
-                            // Usuario normal, dirigir al menú principal
-                            Snackbar
-                                .make(
-                                    findViewById(android.R.id.content),
-                                    "Vendedor validado",
-                                    Snackbar.LENGTH_LONG
-                                ).show()
-                            startActivity(Intent(this, MenuVendedorActivity::class.java))
-                        }
-
-                    } else {
-                        Snackbar
-                            .make(
-                                findViewById(android.R.id.content),
-                                "Vendedor no encontrado",
-                                Snackbar.LENGTH_LONG
-                            ).show()
-                        startActivity(Intent(this, LoginActivity::class.java))
                     }
                 }
-        }
-        btnRegister.setOnClickListener {
-            startActivity(Intent(this, RegisterCustomerActivity::class.java)) // redirección al fragmento de registro
         }
     }
 }

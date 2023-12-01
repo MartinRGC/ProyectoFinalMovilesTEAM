@@ -33,7 +33,7 @@ class ListadoRestauActivity: AppCompatActivity(), RestauAdapter.OnRestauranteCli
                         document.getString("nombre") ?: "",
                         document.getString("puntuacion") ?: "",
                         document.getString("tiempo") ?: "",
-                        document.getString("idrestaurante") ?: "",
+                        document.getString("id") ?: "",
                     )
                 }
 

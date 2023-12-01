@@ -42,7 +42,7 @@ class RestauAdapter(private var lstRestau: List<RestauranteModel>): RecyclerView
 
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
             val itemR = lstRestau[position]
-            var IDR = itemR.idrestaurante
+            var IDR = itemR.id
             holder.tvNombre.text = itemR.nombre
             holder.tvPuntuacion.text=itemR.puntuacion
             holder.tvTiempo.text=itemR.tiempo
