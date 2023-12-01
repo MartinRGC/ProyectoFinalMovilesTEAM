@@ -6,12 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".RrepartidoresActivity">
 
+    <EditText
+        android:id="@+id/editTextText14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/editTextText30"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText30"
+        tools:ignore="MissingConstraints" />
+
     <TextView
         android:id="@+id/textView30"
         android:layout_width="0dp"
         android:layout_height="31dp"
         android:layout_marginStart="15dp"
-        android:layout_marginEnd="42dp"
+        android:layout_marginEnd="43dp"
         android:text="Nombre Completo"
         app:layout_constraintBaseline_toBaselineOf="@+id/editTextText30"
         app:layout_constraintEnd_toStartOf="@+id/editTextText30"
@@ -23,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="95dp"
-        android:layout_marginEnd="29dp"
+        android:layout_marginEnd="28dp"
         android:ems="10"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,25 +53,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textView30"
         tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/editTextText3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="4dp"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText30"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText30"
-        tools:ignore="MissingConstraints" />
-
     <TextView
         android:id="@+id/textView20"
         android:layout_width="74dp"
         android:layout_height="22dp"
         android:layout_marginStart="23dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginBottom="65dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginBottom="63dp"
         android:text="Email"
         app:layout_constraintBottom_toBottomOf="@+id/textView33"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,12 +70,11 @@
         android:id="@+id/editTextText4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="29dp"
+        android:layout_marginTop="11dp"
         android:ems="10"
         android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText3"
+        app:layout_constraintStart_toStartOf="@+id/editTextText14"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText14"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -84,18 +82,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="23dp"
-        android:layout_marginTop="6dp"
         android:text="Fecha de ingreso"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextText0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextText0"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editTextText0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="29dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="28dp"
         android:ems="10"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
@@ -107,24 +104,23 @@
         android:layout_width="0dp"
         android:layout_height="27dp"
         android:layout_marginStart="19dp"
-        android:layout_marginTop="81dp"
+        android:layout_marginTop="56dp"
         android:layout_marginEnd="21dp"
-        android:layout_marginBottom="82dp"
         android:text="Teléfono"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextText74"
         app:layout_constraintEnd_toEndOf="@+id/textView33"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextText0"
+        app:layout_constraintTop_toBottomOf="@+id/textView33"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editTextText65"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="28dp"
         android:ems="10"
         android:inputType="text"
-        app:layout_constraintStart_toStartOf="@+id/editTextText0"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextText0"
         tools:ignore="MissingConstraints" />
 
@@ -144,7 +140,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="37dp"
-        android:layout_marginEnd="33dp"
+        android:layout_marginEnd="32dp"
         android:ems="10"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
@@ -153,30 +149,34 @@
 
     <Button
         android:id="@+id/btnRegister3"
-        android:layout_width="243dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="59dp"
+        android:layout_width="236dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="121dp"
+        android:layout_marginBottom="122dp"
         android:background="@drawable/ovalado"
         android:text="REGISTRAR"
         android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView54"
+        app:layout_constraintTop_toTopOf="@+id/editTextText74"
         tools:ignore="DuplicateIds,MissingConstraints,NotSibling" />
 
     <Button
         android:id="@+id/btnRegister2"
         android:layout_width="0dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="74dp"
-        android:layout_marginEnd="74dp"
-        android:layout_marginBottom="36dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginBottom="42dp"
         android:background="@drawable/ovalado"
         android:text="Cancelar"
         android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegister3"
         tools:ignore="DuplicateIds,MissingConstraints" />
 
     <Button
@@ -184,12 +184,16 @@
         android:layout_width="224dp"
         android:layout_height="53dp"
         android:layout_marginTop="16dp"
+        android:layout_marginBottom="26dp"
         android:background="#462B9C"
         android:text="REGISTRO DE REPARTIDORES"
         android:textColor="#ffffff"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText30"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 
 

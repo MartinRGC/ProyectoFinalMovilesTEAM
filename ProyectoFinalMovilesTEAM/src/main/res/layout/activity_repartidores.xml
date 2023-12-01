@@ -39,8 +39,8 @@
 
     <Button
         android:id="@+id/btnRegReparti"
-        android:layout_width="220dp"
-        android:layout_height="48dp"
+        android:layout_width="203dp"
+        android:layout_height="45dp"
         android:layout_marginBottom="28dp"
         android:background="#462B9C"
         android:text="Regresar"
