@@ -15,7 +15,6 @@ class ListadoRestauActivity: AppCompatActivity(), RestauAdapter.OnRestauranteCli
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listadorestau)
-
         val rvRestaurantes = findViewById<RecyclerView>(R.id.rvRestaurante)
         rvRestaurantes.layoutManager = LinearLayoutManager(this)
 
@@ -33,8 +32,8 @@ class ListadoRestauActivity: AppCompatActivity(), RestauAdapter.OnRestauranteCli
                         document.getString("imageUrl") ?: "",
                         document.getString("nombre") ?: "",
                         document.getString("puntuacion") ?: "",
-                        document.getString("tiempo") ?: ""
-
+                        document.getString("tiempo") ?: "",
+                        document.getString("idrestaurante") ?: "",
                     )
                 }
 
@@ -46,9 +45,9 @@ class ListadoRestauActivity: AppCompatActivity(), RestauAdapter.OnRestauranteCli
             }
     }
 
-    override fun onRestauranteClick(restauranteModel: RestauranteModel) {
+    override fun onRestauranteClick(IDR:String) {
         val intent = Intent(this, DetRestaurante::class.java)
-        intent.putExtra("RESTAURANTE_DETALLE", restauranteModel)
+        intent.putExtra("RESTAURANTE_ID", IDR)
         startActivity(intent)
     }
 }

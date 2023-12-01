@@ -22,6 +22,9 @@
             android:name=".FormularioActivity"
             android:exported="false" />
         <activity
+            android:name=".MenuVendedorActivity"
+            android:exported="false" />
+        <activity
             android:name=".RepartidoresActivity"
             android:exported="false" />
         <activity
