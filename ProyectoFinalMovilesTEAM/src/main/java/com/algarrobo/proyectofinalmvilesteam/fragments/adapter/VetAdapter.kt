@@ -26,6 +26,8 @@ class VetAdapter(private var lstVeterinaria: List<VeterinariaModel>) :
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvNombre: TextView = itemView.findViewById(R.id.tvNombreV)
         val ivVeterinaria: ImageView = itemView.findViewById(R.id.ivVeterinaria)
+        val tvPuntuacion: TextView = itemView.findViewById(R.id.tvPuntuacionV)
+        val tvTiempo: TextView = itemView.findViewById(R.id.tvTiempoV)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -40,6 +42,8 @@ class VetAdapter(private var lstVeterinaria: List<VeterinariaModel>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val itemV = lstVeterinaria[position]
         holder.tvNombre.text = itemV.nombre
+        holder.tvPuntuacion.text=itemV.puntuacion
+        holder.tvTiempo.text=itemV.tiempo
         Picasso.get().load(itemV.imageUrl).into(holder.ivVeterinaria)
 
         holder.itemView.setOnClickListener {

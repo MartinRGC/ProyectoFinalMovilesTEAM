@@ -31,7 +31,10 @@ class ListadoRestauActivity: AppCompatActivity(), RestauAdapter.OnRestauranteCli
                 val listaRestaurantes = snap?.documents?.mapNotNull { document ->
                     RestauranteModel(
                         document.getString("imageUrl") ?: "",
-                        document.getString("nombre") ?: ""
+                        document.getString("nombre") ?: "",
+                        document.getString("puntuacion") ?: "",
+                        document.getString("tiempo") ?: ""
+
                     )
                 }
 

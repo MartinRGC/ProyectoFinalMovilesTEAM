@@ -4,5 +4,7 @@ import java.io.Serializable
 
 data class VeterinariaModel(
     val imageUrl: String ="",
-    val nombre: String=""
+    val nombre: String="",
+    val puntuacion:String="",
+    val tiempo:String=""
 ): Serializable

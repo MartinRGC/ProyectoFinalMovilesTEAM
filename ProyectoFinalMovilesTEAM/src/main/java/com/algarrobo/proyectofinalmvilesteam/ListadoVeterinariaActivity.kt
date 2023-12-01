@@ -31,7 +31,9 @@ class ListadoVeterinariaActivity : AppCompatActivity(), VetAdapter.OnVeterinaria
                 val listaVeterinarias = snap?.documents?.mapNotNull { document ->
                     VeterinariaModel(
                         document.getString("imageUrl") ?: "",
-                        document.getString("nombre") ?: ""
+                        document.getString("nombre") ?: "",
+                        document.getString("puntuacion") ?: "",
+                        document.getString("tiempo") ?: ""
                     )
                 }
 

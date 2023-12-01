@@ -28,6 +28,9 @@ class RestauAdapter(private var lstRestau: List<RestauranteModel>): RecyclerView
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvNombre: TextView = itemView.findViewById(R.id.tvNombre)
         val ivRestaurante: ImageView = itemView.findViewById(R.id.ivRestaurante)
+        val tvPuntuacion: TextView = itemView.findViewById(R.id.tvPuntuacion)
+        val tvTiempo: TextView = itemView.findViewById(R.id.tvTiempo)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -40,15 +43,19 @@ class RestauAdapter(private var lstRestau: List<RestauranteModel>): RecyclerView
     }
 
         override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val itemR = lstRestau[position]
-        holder.tvNombre.text = itemR.nombre
-        Picasso.get().load(itemR.imageUrl).into(holder.ivRestaurante)
+            val itemR = lstRestau[position]
+            holder.tvNombre.text = itemR.nombre
+            holder.tvPuntuacion.text=itemR.puntuacion
+            holder.tvTiempo.text=itemR.tiempo
 
-        holder.itemView.setOnClickListener {
-            val intent = Intent(holder.itemView.context, DetRestaurante::class.java)
-            intent.putExtra("RESTAURANTE_DETALLE", itemR)
-            holder.itemView.context.startActivity(intent)
+            Picasso.get().load(itemR.imageUrl).into(holder.ivRestaurante)
+
+            holder.itemView.setOnClickListener {
+                val intent = Intent(holder.itemView.context, DetRestaurante::class.java)
+                intent.putExtra("RESTAURANTE_DETALLE", itemR)
+                holder.itemView.context.startActivity(intent)
+            }
         }
         }
 
-}
+

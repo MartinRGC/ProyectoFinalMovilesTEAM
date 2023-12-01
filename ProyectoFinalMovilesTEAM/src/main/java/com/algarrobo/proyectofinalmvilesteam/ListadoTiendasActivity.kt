@@ -30,8 +30,10 @@ class ListadoTiendasActivity : AppCompatActivity(), TiendasAdapter.OnTiendaClick
 
                 lstTiend = snap!!.documents.map { document ->
                     TiendasModel(
-                        document["imageUrl"].toString(),
-                        document["nombre"].toString()
+                        document.getString("imageUrl") ?: "",
+                        document.getString("nombre") ?: "",
+                        document.getString("puntuacion") ?: "",
+                        document.getString("tiempo") ?: ""
                     )
                 }
 
