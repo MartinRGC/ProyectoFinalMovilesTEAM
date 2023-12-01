@@ -5,8 +5,6 @@ import android.util.Log
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.algarrobo.proyectofinalmvilesteam.models.CTiendasModel
-import com.algarrobo.proyectofinalmvilesteam.models.TiendasModel
 import com.algarrobo.proyectofinalmvilesteam.models.VeterinariaModel
 import com.google.firebase.firestore.FirebaseFirestore
 import com.squareup.picasso.Picasso
