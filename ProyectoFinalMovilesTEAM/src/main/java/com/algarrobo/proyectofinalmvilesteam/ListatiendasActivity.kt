@@ -28,12 +28,10 @@ class ListatiendasActivity : AppCompatActivity() {
 
         val btnListTiendas: Button = findViewById(R.id.btnlistiendas)
 
-        btnListTiendas.setOnClickListener {
             // Obtener datos desde Firebase y actualizar el adaptador
             obtenerTiendasDesdeFirebase { tiendasList ->
                 tiendasAdapter.actualizarLista(tiendasList)
             }
-        }
 
         val btnRegresarDos: Button = findViewById(R.id.btnregresardos)
 

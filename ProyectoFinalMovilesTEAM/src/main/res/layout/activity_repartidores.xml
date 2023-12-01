@@ -4,15 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#628CB6"
     tools:context=".RepartidoresActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView5"
+        android:id="@+id/rvRepartidoresAdmin"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="11dp"
+        android:background="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/btnnvrepartidor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,21 +26,21 @@
         android:id="@+id/btnrepartdrs"
         android:layout_width="187dp"
         android:layout_height="32dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginBottom="31dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="45dp"
         android:background="#0000FF"
         android:text="GESTIÓN DE REPARTIDORES"
         android:textColor="#ffffff"
-        app:layout_constraintBottom_toTopOf="@+id/recyclerView5"
+        app:layout_constraintBottom_toTopOf="@+id/rvRepartidoresAdmin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button7"
-        android:layout_width="187dp"
-        android:layout_height="27dp"
+        android:id="@+id/btnRegReparti"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
         android:layout_marginBottom="28dp"
         android:background="#462B9C"
         android:text="Regresar"
@@ -58,11 +60,73 @@
         android:background="#0000FF"
         android:text="Nuevo Repartidor"
         android:textColor="#ffffff"
-        app:layout_constraintBottom_toTopOf="@+id/button7"
-        app:layout_constraintEnd_toEndOf="@+id/button7"
-        app:layout_constraintStart_toStartOf="@+id/button7"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView5"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegReparti"
+        app:layout_constraintEnd_toEndOf="@+id/btnRegReparti"
+        app:layout_constraintStart_toStartOf="@+id/btnRegReparti"
+        app:layout_constraintTop_toBottomOf="@+id/rvRepartidoresAdmin"
         tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="71dp"
+        android:text="Nombre"
+        android:textColor="#010005"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="71dp"
+        android:layout_marginBottom="10dp"
+        android:text="Apellido"
+        android:textColor="#010005"
+        app:layout_constraintBottom_toTopOf="@+id/rvRepartidoresAdmin"
+        app:layout_constraintStart_toEndOf="@+id/textView44"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView46"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="60dp"
+        android:text="Ciudad"
+        android:textColor="#010005"
+        app:layout_constraintBottom_toTopOf="@+id/rvRepartidoresAdmin"
+        app:layout_constraintStart_toEndOf="@+id/textView45"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView47"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="60dp"
+        android:text="Telefono"
+        android:textColor="#010005"
+        app:layout_constraintBottom_toTopOf="@+id/rvRepartidoresAdmin"
+        app:layout_constraintStart_toEndOf="@+id/textView46"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView48"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="16dp"
+        android:text="Correo"
+        android:textColor="#010005"
+        app:layout_constraintBottom_toTopOf="@+id/rvRepartidoresAdmin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView47"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
