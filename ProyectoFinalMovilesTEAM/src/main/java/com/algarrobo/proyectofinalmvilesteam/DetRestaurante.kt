@@ -18,11 +18,13 @@ import com.squareup.picasso.Picasso
 
 class DetRestaurante : AppCompatActivity(), ProductoRAdapter.OnProductoRClickListener {
 
+    private var restauranteId: String? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detrestaurante)
 
-        val restauranteId = intent.getStringExtra("RESTAURANTE_ID")
+
+        restauranteId = intent.getStringExtra("RESTAURANTE_ID")
 
         // Referencia a la base de datos de Firebase
         val db = FirebaseFirestore.getInstance()
@@ -83,13 +85,8 @@ class DetRestaurante : AppCompatActivity(), ProductoRAdapter.OnProductoRClickLis
 
     override fun onProductoRClick(IDRP:String) {
         val intent = Intent(this, SubtotalProductoRestaurante::class.java)
-        val restauranteId = intent.getStringExtra("RESTAURANTE_ID")
-
-        // Combinar el ID del restaurante y del producto, separados por un carácter especial
-        val restauranteProductoId = "$restauranteId-$IDRP"
-
-        // Pasar el ID combinado a la siguiente actividad
-        intent.putExtra("RESTAURANTEPRODUCTO_ID", restauranteProductoId)
+        intent.putExtra("RESTAURANTE_ID",restauranteId )
+        intent.putExtra("PRODUCTO_ID", IDRP)
         startActivity(intent)
     }
     }
