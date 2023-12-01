@@ -32,7 +32,9 @@ class ListadoTiendaCActivity : AppCompatActivity(), CTiendaAdapter.OnTiendaCClic
                 val listaTiendasC = snap?.documents?.mapNotNull { document ->
                     CTiendasModel(
                         document.getString("imageUrl") ?: "",
-                        document.getString("nombre") ?: ""
+                        document.getString("nombre") ?: "",
+                        document.getString("puntuacion") ?: "",
+                        document.getString("tiempo") ?: ""
                     )
                 }
 

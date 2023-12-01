@@ -31,7 +31,9 @@ class ListadoFarmActivity : AppCompatActivity(), FarmaAdapter.OnFarmaciaClickLis
                 val listaFarmacias = snap?.documents?.mapNotNull { document ->
                     FarmaModel(
                         document.getString("imageUrl") ?: "",
-                        document.getString("nombre") ?: ""
+                        document.getString("nombre") ?: "",
+                        document.getString("puntuacion") ?: "",
+                        document.getString("tiempo") ?: ""
                     )
                 }
 

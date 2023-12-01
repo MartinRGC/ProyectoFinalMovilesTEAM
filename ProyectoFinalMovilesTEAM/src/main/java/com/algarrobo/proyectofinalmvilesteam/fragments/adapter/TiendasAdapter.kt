@@ -28,6 +28,8 @@ class TiendasAdapter(private var lstTienda: List<TiendasModel>) :
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val tvNombre: TextView = itemView.findViewById(R.id.tvNombreT)
         val ivTienda: ImageView = itemView.findViewById(R.id.ivTiendas)
+        val tvPuntuacion: TextView = itemView.findViewById(R.id.tvPuntuacionT)
+        val tvTiempo: TextView = itemView.findViewById(R.id.tvTiempoT)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -42,6 +44,8 @@ class TiendasAdapter(private var lstTienda: List<TiendasModel>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val itemT = lstTienda[position]
         holder.tvNombre.text = itemT.nombre
+        holder.tvPuntuacion.text=itemT.puntuacion
+        holder.tvTiempo.text=itemT.tiempo
         Picasso.get().load(itemT.imageUrl).into(holder.ivTienda)
 
         holder.itemView.setOnClickListener {
