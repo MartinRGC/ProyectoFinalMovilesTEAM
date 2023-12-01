@@ -31,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
                         if (correo.endsWith("@admin.com")) {
                             startActivity(Intent(this, Menu_principalActivity::class.java))
                         } else if (correo.endsWith("@seller.com")) {
-                            startActivity(Intent(this, PrincipalVendedorActivity::class.java))
+                            startActivity(Intent(this, PrincipalActivity::class.java))
                         } else {
                             Snackbar
                                 .make(
