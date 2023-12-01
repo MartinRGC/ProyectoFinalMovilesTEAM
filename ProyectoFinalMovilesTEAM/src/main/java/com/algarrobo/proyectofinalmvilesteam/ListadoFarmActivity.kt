@@ -33,7 +33,8 @@ class ListadoFarmActivity : AppCompatActivity(), FarmaAdapter.OnFarmaciaClickLis
                         document.getString("imageUrl") ?: "",
                         document.getString("nombre") ?: "",
                         document.getString("puntuacion") ?: "",
-                        document.getString("tiempo") ?: ""
+                        document.getString("tiempo") ?: "",
+                        document.getString("id") ?: "",
                     )
                 }
 
@@ -45,9 +46,9 @@ class ListadoFarmActivity : AppCompatActivity(), FarmaAdapter.OnFarmaciaClickLis
             }
     }
 
-    override fun onFarmaciaClick(farmaciaModel: FarmaModel) {
+    override fun onFarmaciaClick(IDF: String) {
         val intent = Intent(this, DetFarmacia::class.java)
-        intent.putExtra("FARMACIA_DETALLE", farmaciaModel)
+        intent.putExtra("FARMACIA_ID", IDF)
         startActivity(intent)
     }
 }

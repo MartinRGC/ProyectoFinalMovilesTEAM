@@ -17,7 +17,7 @@ class CTiendaAdapter(private var lstTiendaC: List<CTiendasModel>) :
     private var clickListener: OnTiendaCClickListener? = null
 
     interface OnTiendaCClickListener {
-        fun onTiendaCClick(tiendaCModel: CTiendasModel)
+        fun onTiendaCClick(tiendaCModel: String)
     }
 
     fun setOnTiendaCClickListener(listener: OnTiendaCClickListener) {
@@ -42,13 +42,14 @@ class CTiendaAdapter(private var lstTiendaC: List<CTiendasModel>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val itemTC = lstTiendaC[position]
+        var IDTC = itemTC.id
         holder.tvNombre.text = itemTC.nombre
         holder.tvPuntuacion.text=itemTC.puntuacion
         holder.tvTiempo.text=itemTC.tiempo
         Picasso.get().load(itemTC.imageUrl).into(holder.ivTiendaC)
 
         holder.itemView.setOnClickListener {
-            clickListener?.onTiendaCClick(itemTC)
+            clickListener?.onTiendaCClick(IDTC )
         }
     }
 }

@@ -1,14 +1,11 @@
 package com.algarrobo.proyectofinalmvilesteam.fragments.adapter
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.algarrobo.proyectofinalmvilesteam.DetFarmacia
-import com.algarrobo.proyectofinalmvilesteam.DetRestaurante
 import com.algarrobo.proyectofinalmvilesteam.R
 import com.algarrobo.proyectofinalmvilesteam.models.FarmaModel
 import com.squareup.picasso.Picasso
@@ -19,7 +16,7 @@ class FarmaAdapter(private var lstFarmacia: List<FarmaModel>) :
     private var clickListener: OnFarmaciaClickListener? = null
 
     interface OnFarmaciaClickListener {
-        fun onFarmaciaClick(farmaciaModel: FarmaModel)
+        fun onFarmaciaClick(farmaciaModel: String)
     }
 
     fun setOnFarmaciaClickListener(listener: OnFarmaciaClickListener) {
@@ -46,15 +43,14 @@ class FarmaAdapter(private var lstFarmacia: List<FarmaModel>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val itemF = lstFarmacia[position]
+        var IDF = itemF.id
         holder.tvNombre.text = itemF.nombre
         holder.tvPuntuacion.text=itemF.puntuacion
         holder.tvTiempo.text=itemF.tiempo
         Picasso.get().load(itemF.imageUrl).into(holder.ivFarmacia)
 
         holder.itemView.setOnClickListener {
-            val intent = Intent(holder.itemView.context, DetFarmacia::class.java)
-            intent.putExtra("FARMACIA_DETALLE", itemF)
-            holder.itemView.context.startActivity(intent)
+            clickListener?.onFarmaciaClick(IDF) // Pasar solo el ID del restaurante
         }
     }
 }

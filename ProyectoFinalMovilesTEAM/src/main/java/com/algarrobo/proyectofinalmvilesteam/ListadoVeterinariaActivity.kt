@@ -33,7 +33,8 @@ class ListadoVeterinariaActivity : AppCompatActivity(), VetAdapter.OnVeterinaria
                         document.getString("imageUrl") ?: "",
                         document.getString("nombre") ?: "",
                         document.getString("puntuacion") ?: "",
-                        document.getString("tiempo") ?: ""
+                        document.getString("tiempo") ?: "",
+                        document.getString("id") ?: "",
                     )
                 }
 
@@ -45,9 +46,9 @@ class ListadoVeterinariaActivity : AppCompatActivity(), VetAdapter.OnVeterinaria
             }
     }
 
-    override fun onVeterinariaClick(veterinariaModel: VeterinariaModel) {
+    override fun onVeterinariaClick(IDV:String) {
         val intent = Intent(this, DetVeterinaria::class.java)
-        intent.putExtra("VETERINARIA_DETALLE", veterinariaModel)
+        intent.putExtra("VETERINARIA_ID", IDV)
         startActivity(intent)
     }
 }

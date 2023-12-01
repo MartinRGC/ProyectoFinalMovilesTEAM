@@ -6,5 +6,8 @@ data class CTiendasModel(
     val imageUrl: String ="",
     val nombre: String="",
     val puntuacion:String="",
-    val tiempo:String=""
+    val tiempo:String="",
+    val id:String="",
+    val Name:String="",
+    val IMAGE:String=""
 ): Serializable
