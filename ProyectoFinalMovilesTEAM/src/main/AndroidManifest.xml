@@ -43,6 +43,9 @@
             android:name=".DetRestaurante"
             android:exported="false" />
         <activity
+            android:name=".SubtotalProductoRestaurante"
+            android:exported="false" />
+        <activity
             android:name=".DetFarmacia"
             android:exported="false" />
         <activity

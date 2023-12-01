@@ -16,7 +16,7 @@ class ProductoRAdapter(private var productList: List<ProductoRestauranteModel>) 
     private var clickListener: OnProductoRClickListener? = null
 
     interface OnProductoRClickListener {
-        fun onProductoRClick(idProducto: String)
+        fun onProductoRClick(restauranteModel: String)
     }
 
     fun setOnProductoRClickListener(listener: OnProductoRClickListener) {
@@ -25,7 +25,7 @@ class ProductoRAdapter(private var productList: List<ProductoRestauranteModel>) 
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val ivProductImage: ImageView = itemView.findViewById(R.id.ivProductoRestaurante)
-        val tvPrice: TextView = itemView.findViewById(R.id.tvPrecio)
+        val tvPrice: TextView = itemView.findViewById(R.id.tvPrecior)
         val tvDescription: TextView = itemView.findViewById(R.id.tvDescripcion)
 
         init {
@@ -53,10 +53,14 @@ class ProductoRAdapter(private var productList: List<ProductoRestauranteModel>) 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val product = productList[position]
+        val IDRP = product.id
 
         holder.tvPrice.text = product.precio ?: "Precio no disponible" // Manejo de posible nulo
         holder.tvDescription.text = product.descripcion ?: "Descripción no disponible" // Manejo de posible nulo
 
         Picasso.get().load(product.imageUrl).into(holder.ivProductImage)
+        holder.itemView.setOnClickListener {
+            clickListener?.onProductoRClick(IDRP) // Pasar solo el ID del restaurante
+        }
     }
 }

@@ -1,5 +1,6 @@
 package com.algarrobo.proyectofinalmvilesteam
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageView
@@ -80,9 +81,17 @@ class DetRestaurante : AppCompatActivity(), ProductoRAdapter.OnProductoRClickLis
             }
     }
 
-    override fun onProductoRClick(idProducto: String) {
-        // Manejar la acción al hacer clic en un producto
-        // Puedes implementar la lógica correspondiente aquí
+    override fun onProductoRClick(IDRP:String) {
+        val intent = Intent(this, SubtotalProductoRestaurante::class.java)
+        val restauranteId = intent.getStringExtra("RESTAURANTE_ID")
+
+        // Combinar el ID del restaurante y del producto, separados por un carácter especial
+        val restauranteProductoId = "$restauranteId-$IDRP"
+
+        // Pasar el ID combinado a la siguiente actividad
+        intent.putExtra("RESTAURANTEPRODUCTO_ID", restauranteProductoId)
+        startActivity(intent)
     }
-}
+    }
+
 

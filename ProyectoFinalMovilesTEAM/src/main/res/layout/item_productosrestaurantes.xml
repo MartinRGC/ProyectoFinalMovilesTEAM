@@ -16,7 +16,7 @@
         android:textColor="#C5CAE9"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPrecio"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrecior"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
@@ -54,7 +54,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView52" />
 
     <TextView
-        android:id="@+id/tvPrecio"
+        android:id="@+id/tvPrecior"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
