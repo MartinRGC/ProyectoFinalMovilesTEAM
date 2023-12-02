@@ -3,12 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".NuevaTarjetaActivity">
 
     <ImageView
         android:id="@+id/imageView64"
-        android:layout_width="412dp"
-        android:layout_height="304dp"
+        android:layout_width="411dp"
+        android:layout_height="270dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView34"
@@ -27,7 +28,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextText8"
+        android:id="@+id/editTextNombreM"
         android:layout_width="352dp"
         android:layout_height="41dp"
         android:layout_marginTop="24dp"
@@ -37,10 +38,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.525"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView64" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView64"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextText9"
+        android:id="@+id/editTextNumero"
         android:layout_width="354dp"
         android:layout_height="47dp"
         android:layout_marginTop="20dp"
@@ -50,23 +52,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText8" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNombreM"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextText10"
+        android:id="@+id/editTextNombreT"
         android:layout_width="350dp"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="Nombre de la tarjeta"
+        android:hint="Nombre en la tarjeta"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText9" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumero" />
 
     <EditText
-        android:id="@+id/editTextText11"
+        android:id="@+id/editTextFecha"
         android:layout_width="180dp"
         android:layout_height="45dp"
         android:layout_marginStart="32dp"
@@ -75,10 +78,11 @@
         android:hint="Fecha vencimiento"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText10" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNombreT"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/editTextText12"
+        android:id="@+id/editTextCVC"
         android:layout_width="142dp"
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
@@ -87,32 +91,44 @@
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toEndOf="@+id/editTextText11"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText10" />
+        app:layout_constraintStart_toEndOf="@+id/editTextFecha"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNombreT"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnAgregar"
         android:layout_width="139dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="36dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="26dp"
         android:text="Agregar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText12"
-        app:layout_constraintVertical_bias="0.029" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCVC"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/btnPagar"
         android:layout_width="102dp"
         android:layout_height="46dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="52dp"
+        android:onClick="pagar"
         android:text="Pagar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.785"
-        app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText12"
-        app:layout_constraintVertical_bias="0.153" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCVC"
+        app:layout_constraintVertical_bias="0.025"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="57dp"
+        android:layout_height="50dp"
+        android:onClick="regresar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView34"
+        app:srcCompat="@drawable/felcha" />
 </androidx.constraintlayout.widget.ConstraintLayout>
