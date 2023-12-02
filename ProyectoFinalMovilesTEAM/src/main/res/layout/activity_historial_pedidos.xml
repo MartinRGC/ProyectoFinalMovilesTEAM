@@ -170,7 +170,7 @@
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/imageView35"
+        android:id="@+id/idMetodoPago"
         android:layout_width="331dp"
         android:layout_height="46dp"
         android:layout_marginTop="12dp"
@@ -188,7 +188,7 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView28"
         app:layout_constraintHorizontal_bias="0.115"
         app:layout_constraintStart_toStartOf="@+id/imageView28"
-        app:layout_constraintTop_toBottomOf="@+id/imageView35"
+        app:layout_constraintTop_toBottomOf="@+id/idMetodoPago"
         app:srcCompat="@drawable/arr"
         tools:ignore="MissingConstraints" />
 
@@ -201,7 +201,7 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView28"
         app:layout_constraintHorizontal_bias="0.35"
         app:layout_constraintStart_toEndOf="@+id/imageView31"
-        app:layout_constraintTop_toBottomOf="@+id/imageView35"
+        app:layout_constraintTop_toBottomOf="@+id/idMetodoPago"
         tools:ignore="MissingConstraints" />
 
     <ImageView

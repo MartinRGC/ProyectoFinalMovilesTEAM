@@ -1,57 +1,56 @@
 package com.algarrobo.proyectofinalmvilesteam
 
-import android.annotation.SuppressLint
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.algarrobo.proyectofinalmvilesteam.adapter.RestAdapter
-import com.algarrobo.proyectofinalmvilesteam.adapter.TiendAdapter
-import com.algarrobo.proyectofinalmvilesteam.fragments.adapter.RestauAdapter
-import com.algarrobo.proyectofinalmvilesteam.models.LRestModel
-import com.algarrobo.proyectofinalmvilesteam.models.LTiendasModel
-import com.google.firebase.firestore.FirebaseFirestore
+import com.algarrobo.proyectofinalmvilesteam.fragments.adapter.ProductoRAdapter
+import com.algarrobo.proyectofinalmvilesteam.models.ProductoRestauranteModel
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class ListaRestaurantesActivity : AppCompatActivity() {
-    private val db = FirebaseFirestore.getInstance()
-    private lateinit var restaAdapter: RestAdapter
-    @SuppressLint("WrongViewCast", "MissingInflatedId", "SuspiciousIndentation")
+
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var productoAdapter: ProductoRAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lista_restaurantes)
 
-        val recyclerView: RecyclerView = findViewById(R.id.rvRestAdmins)
+        recyclerView = findViewById(R.id.rvRestAdmins)
         recyclerView.layoutManager = LinearLayoutManager(this)
+        productoAdapter = ProductoRAdapter(emptyList())
+        recyclerView.adapter = productoAdapter
 
-        restaAdapter = RestAdapter(emptyList()) // Inicializar con una lista vacía
-        recyclerView.adapter = restaAdapter
+        // Leer los datos desde Firebase
+        val databaseReference: DatabaseReference = FirebaseDatabase.getInstance().getReference("Productos")
 
+        databaseReference.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val productos = mutableListOf<ProductoRestauranteModel>()
 
-            // Obtener datos desde Firebase y actualizar el adaptador
-            obtenerRestauDesdeFirebase { restaList ->
-                restaAdapter.actualizarLista(restaList)
-            }
-
-        val btnRegre: Button = findViewById(R.id.btnRegresRest)
-
-        btnRegre.setOnClickListener {
-            startActivity(Intent(this, Menu_principalActivity::class.java))
-        }
-    }
-    private fun obtenerRestauDesdeFirebase(callback: (List<LRestModel>) -> Unit) {
-        db.collection("restaurantes")
-            .get()
-            .addOnSuccessListener { result ->
-                val restList = result.map { document ->
-                    document.toObject(LRestModel::class.java)
+                for (snapshot in dataSnapshot.children) {
+                    val producto = snapshot.getValue(ProductoRestauranteModel::class.java)
+                    producto?.let {
+                        productos.add(it)
+                    }
                 }
-                callback(restList)
+
+                // Actualizar el RecyclerView con la lista de productos
+                actualizarRecyclerView(productos)
             }
-            .addOnFailureListener { exception ->
-                // Manejar errores
-                callback(emptyList())
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                // Manejar errores, si es necesario
             }
+        })
+    }
+
+    private fun actualizarRecyclerView(productos: List<ProductoRestauranteModel>) {
+        productoAdapter.actualizarProductos(productos)
     }
 }

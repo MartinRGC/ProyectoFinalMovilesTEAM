@@ -51,4 +51,9 @@ class ProductoRAdapter(private var productList: List<ProductoRestauranteModel>) 
             clickListener?.onProductoRClick(IDRP) // Pasar solo el ID del restaurante
         }
     }
+
+    fun actualizarProductos(newList: List<ProductoRestauranteModel>) {
+        productList = newList
+        notifyDataSetChanged()
+    }
 }

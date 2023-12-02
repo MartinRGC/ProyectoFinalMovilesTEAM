@@ -30,8 +30,8 @@ class RestAdapter (private var restaList: List<LRestModel>):
         notifyDataSetChanged()
     }
     inner class RestauViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        val nombreRestTV: TextView = itemView.findViewById(R.id.nombreRestTV)
-        val tipoRestTV: TextView = itemView.findViewById(R.id.tipoRestTV)
+        val nombreRestTV: TextView = itemView.findViewById(R.id.tvDescripcionProd)
+        val tipoRestTV: TextView = itemView.findViewById(R.id.tvPreciorProd)
         val telefonoRestTV: TextView = itemView.findViewById(R.id.telefonoRestTV)
         val horarioateRestTV: TextView = itemView.findViewById(R.id.horarioateRestTV)
         val rucRestTV: TextView = itemView.findViewById(R.id.rucRestTV)

@@ -62,7 +62,7 @@ class LoginActivity : AppCompatActivity() {
                                     "Usuario validado",
                                     Snackbar.LENGTH_LONG
                                 ).show()
-                            //startActivity(Intent(this, PrincipalActivity::class.java))
+                            startActivity(Intent(this, PrincipalActivity::class.java))
                         }
                     } else {
                         // Manejar errores durante el inicio de sesión

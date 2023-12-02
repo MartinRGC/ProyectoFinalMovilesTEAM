@@ -21,6 +21,10 @@ class UserActivity : AppCompatActivity() {
 
         imagen1.setOnClickListener{startActivity(Intent(this,AyudaActivity::class.java))
         }
+        val imagen2: ImageView = findViewById(R.id.idMetodoPago)
+
+        imagen2.setOnClickListener{startActivity(Intent(this,MetodoDePagoActivity::class.java))
+        }
 
     }
     fun MenuUsuario(view: View){

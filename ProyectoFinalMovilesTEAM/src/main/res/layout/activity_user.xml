@@ -150,7 +150,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imgAyuda" />
 
     <ImageView
-        android:id="@+id/imageView35"
+        android:id="@+id/idMetodoPago"
         android:layout_width="66dp"
         android:layout_height="65dp"
         android:layout_marginTop="4dp"
@@ -183,7 +183,7 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView15"
         app:layout_constraintHorizontal_bias="0.588"
         app:layout_constraintStart_toStartOf="@+id/imageView15"
-        app:layout_constraintTop_toBottomOf="@+id/imageView35"
+        app:layout_constraintTop_toBottomOf="@+id/idMetodoPago"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
