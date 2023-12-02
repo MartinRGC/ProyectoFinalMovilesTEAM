@@ -29,10 +29,30 @@ class LoginActivity : AppCompatActivity() {
                     if (task.isSuccessful) {
                         // Verificar el tipo de usuario después del inicio de sesión exitoso
                         if (correo.endsWith("@seller.com")) {
-                            startActivity(Intent(this, Menu_principalActivity::class.java))
+                            val sellerDomain = correo.split("@")[0].toLowerCase()
+                            when {
+                                sellerDomain == "mcdonalds" -> {
+                                    // Redirigir al menú de McDonald's
+                                    startActivity(Intent(this, McDonaldsMenuActivity::class.java))
+                                }
+                                sellerDomain == "bembos" -> {
+                                    // Redirigir al menú de Bembos
+                                    startActivity(Intent(this, BembosMenuActivity::class.java))
+                                }
+                                sellerDomain == "dominos" -> {
+                                    // Redirigir al menú de Domino's
+                                    startActivity(Intent(this, DominosMenuActivity::class.java))
+                                }
+                                else -> {
+                                    // Redirigir a una actividad genérica para otros vendedores
+                                    startActivity(Intent(this, Menu_principalActivity::class.java))
+                                }
+                            }
                         } else if (correo.endsWith("@admin.com")) {
+                            // Redirigir al menú principal para administradores
                             startActivity(Intent(this, PrincipalActivity::class.java))
                         } else {
+                            // Redirigir a una actividad genérica para otros tipos de usuarios
                             Snackbar
                                 .make(
                                     findViewById(android.R.id.content),

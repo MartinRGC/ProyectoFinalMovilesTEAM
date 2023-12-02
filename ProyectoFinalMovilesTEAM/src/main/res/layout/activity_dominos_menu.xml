@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Menu_principalActivity"
+    tools:context=".DominosMenuActivity"
     tools:layout_editor_absoluteX="-1dp"
     tools:layout_editor_absoluteY="-131dp">
 
@@ -17,7 +17,7 @@
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="67dp"
         android:background="#8550E4"
-        android:text="Menu principal"
+        android:text="Menu principal Dominos"
         android:textColor="#ffffff"
         app:layout_constraintBottom_toTopOf="@+id/btnlistrestDOM"
         app:layout_constraintEnd_toEndOf="parent"

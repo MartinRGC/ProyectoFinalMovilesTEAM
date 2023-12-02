@@ -8,7 +8,7 @@
     tools:context="ListausuariosActivity">
 
     <Button
-        android:id="@+id/btnmenuprincipal"
+        android:id="@+id/btnmenuprincipalDOM"
         android:layout_width="269dp"
         android:layout_height="22dp"
         android:layout_marginStart="73dp"
@@ -67,7 +67,7 @@
         app:layout_constraintBottom_toTopOf="@+id/recyclerView"
         app:layout_constraintEnd_toStartOf="@+id/textView36"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnmenuprincipal"
+        app:layout_constraintTop_toBottomOf="@+id/btnmenuprincipalDOM"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -104,7 +104,7 @@
         android:textColor="#010005"
         app:layout_constraintEnd_toStartOf="@+id/textView39"
         app:layout_constraintStart_toEndOf="@+id/textView37"
-        app:layout_constraintTop_toBottomOf="@+id/btnmenuprincipal"
+        app:layout_constraintTop_toBottomOf="@+id/btnmenuprincipalDOM"
         tools:ignore="MissingConstraints" />
 
     <TextView
