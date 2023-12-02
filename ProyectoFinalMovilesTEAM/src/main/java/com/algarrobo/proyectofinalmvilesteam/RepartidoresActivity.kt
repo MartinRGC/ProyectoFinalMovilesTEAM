@@ -15,9 +15,10 @@ import com.algarrobo.proyectofinalmvilesteam.models.LRestModel
 import com.google.firebase.firestore.FirebaseFirestore
 
 class RepartidoresActivity : AppCompatActivity() {
+
     private val db = FirebaseFirestore.getInstance()
     private lateinit var reparAdapter: RepartiAdapter
-    @SuppressLint("WrongViewCast", "MissingInflatedId", "SuspiciousIndentation")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_repartidores)
@@ -28,10 +29,11 @@ class RepartidoresActivity : AppCompatActivity() {
         reparAdapter = RepartiAdapter(emptyList())
         recyclerView.adapter = reparAdapter
 
-        // Obtener datos desde Firebase y actualizar el adaptador
-        obtenerRepartiDesdeFirebase { repartList ->
-            reparAdapter.actualizarLista(repartList)
-        }
+        // Obtener el restaurante seleccionado (puedes ajustar esto según cómo obtienes la información del restaurante)
+        val restauranteElegido = obtenerRestauranteSeleccionado()
+
+        // Realiza la consulta a Firebase para obtener los repartidores del restaurante seleccionado
+        obtenerRepartiDesdeFirebase(restauranteElegido)
 
         val btnRegreRepar: Button = findViewById(R.id.btnRegReparti)
 
@@ -45,8 +47,10 @@ class RepartidoresActivity : AppCompatActivity() {
             startActivity(Intent(this, RrepartidoresActivity::class.java))
         }
     }
-    private fun obtenerRepartiDesdeFirebase(callback: (List<LRepartidorModel>) -> Unit) {
+
+    private fun obtenerRepartiDesdeFirebase(restaurante: String) {
         db.collection("repartidores")
+            .whereEqualTo("restaurante", restaurante)  // Filtra por el restaurante seleccionado
             .get()
             .addOnSuccessListener { result ->
                 val repartList = mutableListOf<LRepartidorModel>()
@@ -56,11 +60,19 @@ class RepartidoresActivity : AppCompatActivity() {
                     repartList.add(repartidor)
                 }
 
-                callback(repartList)
+                // Actualiza el Adapter con la nueva lista de repartidores
+                reparAdapter.actualizarLista(repartList)
             }
             .addOnFailureListener { exception ->
                 Log.e("RepartidoresActivity", "Error al obtener repartidores", exception)
-                callback(emptyList())
             }
+    }
+
+    // Método ficticio para obtener el restaurante seleccionado (ajusta según tu implementación)
+    private fun obtenerRestauranteSeleccionado(): String {
+        // Por ejemplo, podrías obtener el restaurante desde un Intent o algún otro lugar
+        return "McDonald's"  // Reemplaza esto con la lógica adecuada para obtener el restaurante seleccionado
+        return "Bembos"
+        return "Dominos"
     }
 }

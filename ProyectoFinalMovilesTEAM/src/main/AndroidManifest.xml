@@ -24,9 +24,6 @@
             android:name=".McDonaldsMenuActivity"
             android:exported="false" />
         <activity
-            android:name=".ModificarRepartidorActivity"
-            android:exported="false" />
-        <activity
             android:name=".SellerActivity"
             android:exported="false" />
         <activity

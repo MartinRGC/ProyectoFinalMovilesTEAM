@@ -3,6 +3,7 @@ package com.algarrobo.proyectofinalmvilesteam
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import com.google.android.material.snackbar.Snackbar
@@ -30,27 +31,29 @@ class LoginActivity : AppCompatActivity() {
                         // Verificar el tipo de usuario después del inicio de sesión exitoso
                         if (correo.endsWith("@seller.com")) {
                             val sellerDomain = correo.split("@")[0].toLowerCase()
+                            Log.d("LoginActivity", "Seller Domain: $sellerDomain")
                             when {
                                 sellerDomain == "mcdonalds" -> {
+                                    Log.d("LoginActivity", "Redirigiendo a McDonald's")
                                     // Redirigir al menú de McDonald's
                                     startActivity(Intent(this, McDonaldsMenuActivity::class.java))
                                 }
                                 sellerDomain == "bembos" -> {
+                                    Log.d("LoginActivity", "Redirigiendo a Bembos")
                                     // Redirigir al menú de Bembos
                                     startActivity(Intent(this, BembosMenuActivity::class.java))
                                 }
                                 sellerDomain == "dominos" -> {
+                                    Log.d("LoginActivity", "Redirigiendo a Domino's")
                                     // Redirigir al menú de Domino's
                                     startActivity(Intent(this, DominosMenuActivity::class.java))
                                 }
                                 else -> {
+                                    Log.d("LoginActivity", "Redirigiendo a Menú Principal")
                                     // Redirigir a una actividad genérica para otros vendedores
                                     startActivity(Intent(this, Menu_principalActivity::class.java))
                                 }
                             }
-                        } else if (correo.endsWith("@admin.com")) {
-                            // Redirigir al menú principal para administradores
-                            startActivity(Intent(this, PrincipalActivity::class.java))
                         } else {
                             // Redirigir a una actividad genérica para otros tipos de usuarios
                             Snackbar
@@ -59,7 +62,7 @@ class LoginActivity : AppCompatActivity() {
                                     "Usuario validado",
                                     Snackbar.LENGTH_LONG
                                 ).show()
-                            startActivity(Intent(this, PrincipalActivity::class.java))
+                            //startActivity(Intent(this, PrincipalActivity::class.java))
                         }
                     } else {
                         // Manejar errores durante el inicio de sesión

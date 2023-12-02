@@ -2,62 +2,77 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/ciudadRepaTV"
-        android:layout_width="82dp"
-        android:layout_height="33dp"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="72dp"
         android:layout_weight="1.5"
         android:padding="8dp"
         android:textSize="11sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/apellidoRepaTV"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/numeroRepaTV"
+        app:layout_constraintEnd_toStartOf="@+id/correoRepaTV"
+        app:layout_constraintStart_toEndOf="@+id/apellidoRepaTV" />
 
     <TextView
         android:id="@+id/apellidoRepaTV"
-        android:layout_width="82dp"
-        android:layout_height="33dp"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1.5"
+        android:padding="8dp"
+        android:textSize="11sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/restaureRepartiTV"
+        app:layout_constraintEnd_toStartOf="@+id/ciudadRepaTV"
+        app:layout_constraintStart_toEndOf="@+id/restaureRepartiTV" />
+
+    <TextView
+        android:id="@+id/nombreRepartiTV"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1.5"
+        android:padding="8dp"
+        android:textSize="11sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/restaureRepartiTV"
+        app:layout_constraintEnd_toStartOf="@+id/restaureRepartiTV"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/restaureRepartiTV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_weight="1.5"
         android:padding="8dp"
         android:textSize="11sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/apellidoRepaTV"
         app:layout_constraintStart_toEndOf="@+id/nombreRepartiTV"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/nombreRepartiTV"
-        android:layout_width="82dp"
-        android:layout_height="33dp"
+        android:id="@+id/numeroRepaTV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="265dp"
+        android:layout_marginEnd="2dp"
         android:layout_weight="1.5"
         android:padding="8dp"
         android:textSize="11sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/correoRepaTV"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/numeroRepaTV"
-        android:layout_width="82dp"
-        android:layout_height="33dp"
-        android:layout_weight="1.5"
-        android:padding="8dp"
-        android:textSize="11sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ciudadRepaTV"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/correoRepaTV"
-        android:layout_width="82dp"
-        android:layout_height="33dp"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
         android:layout_weight="1.5"
         android:padding="8dp"
         android:textSize="11sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/numeroRepaTV"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/numeroRepaTV"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/numeroRepaTV" />
 </androidx.constraintlayout.widget.ConstraintLayout>

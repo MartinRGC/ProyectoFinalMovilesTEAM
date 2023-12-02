@@ -14,7 +14,7 @@ class BembosMenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bembos_menu)
 
-            Log.d("TAG", "McDonaldsMenuActivity onCreate")
+            Log.d("TAG", "BembosMenuActivity onCreate")
 
             val button: Button = findViewById(R.id.btnbbmenuprincipal)
             button.setTextColor(ContextCompat.getColor(this, android.R.color.white))
