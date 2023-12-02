@@ -7,14 +7,14 @@
     tools:context=".RrepartidoresActivity">
 
     <EditText
-        android:id="@+id/editTextText14"
+        android:id="@+id/edtapellidoReparti"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="40dp"
         android:ems="10"
         android:inputType="text"
-        app:layout_constraintStart_toStartOf="@+id/editTextText30"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText30"
+        app:layout_constraintStart_toStartOf="@+id/edtnombreReparti"
+        app:layout_constraintTop_toBottomOf="@+id/edtnombreReparti"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -24,13 +24,13 @@
         android:layout_marginStart="15dp"
         android:layout_marginEnd="43dp"
         android:text="Nombre Completo"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editTextText30"
-        app:layout_constraintEnd_toStartOf="@+id/editTextText30"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edtnombreReparti"
+        app:layout_constraintEnd_toStartOf="@+id/edtnombreReparti"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/editTextText30"
+        android:id="@+id/edtnombreReparti"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="95dp"
@@ -47,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="19dp"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="50dp"
         android:text="Apellidos"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView30"
@@ -58,70 +58,48 @@
         android:layout_width="74dp"
         android:layout_height="22dp"
         android:layout_marginStart="23dp"
-        android:layout_marginTop="62dp"
-        android:layout_marginBottom="63dp"
-        android:text="Email"
-        app:layout_constraintBottom_toBottomOf="@+id/textView33"
+        android:layout_marginTop="90dp"
+        android:text="Ciudad"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView31"
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/editTextText4"
+        android:id="@+id/edtciudadReparti"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="40dp"
         android:ems="10"
         android:inputType="text"
-        app:layout_constraintStart_toStartOf="@+id/editTextText14"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText14"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textView33"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="23dp"
-        android:text="Fecha de ingreso"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextText0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/editTextText0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="28dp"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText4"
+        app:layout_constraintStart_toStartOf="@+id/edtapellidoReparti"
+        app:layout_constraintTop_toBottomOf="@+id/edtapellidoReparti"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView90"
         android:layout_width="0dp"
         android:layout_height="27dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="21dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="360dp"
         android:text="Teléfono"
-        app:layout_constraintEnd_toEndOf="@+id/textView33"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView33"
+        app:layout_constraintTop_toBottomOf="@+id/textView20"
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/editTextText65"
+        android:id="@+id/edttelefonoReparti"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="38dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="28dp"
+        android:layout_marginBottom="360dp"
         android:ems="10"
         android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText0"
+        app:layout_constraintTop_toBottomOf="@+id/edtciudadReparti"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -130,21 +108,24 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="23dp"
         android:layout_marginTop="46dp"
-        android:text="Ciudad"
+        android:text="Correo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView90"
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/editTextText74"
+        android:id="@+id/edtcorreoReparti"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="32dp"
+        android:layout_marginBottom="250dp"
         android:ems="10"
         android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText65"
+        app:layout_constraintTop_toBottomOf="@+id/edttelefonoReparti"
+        app:layout_constraintVertical_bias="0.263"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -159,7 +140,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editTextText74"
+        app:layout_constraintTop_toTopOf="@+id/edtcorreoReparti"
         tools:ignore="DuplicateIds,MissingConstraints,NotSibling" />
 
     <Button
@@ -188,7 +169,7 @@
         android:background="#462B9C"
         android:text="REGISTRO DE REPARTIDORES"
         android:textColor="#ffffff"
-        app:layout_constraintBottom_toTopOf="@+id/editTextText30"
+        app:layout_constraintBottom_toTopOf="@+id/edtnombreReparti"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"

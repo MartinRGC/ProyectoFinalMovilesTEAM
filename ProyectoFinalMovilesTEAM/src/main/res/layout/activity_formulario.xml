@@ -50,7 +50,7 @@
         android:layout_marginBottom="16dp"
         android:ems="10"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/editTextText4"
+        app:layout_constraintBottom_toTopOf="@+id/edtciudadReparti"
         app:layout_constraintStart_toStartOf="@+id/editTextText2"
         tools:ignore="MissingConstraints" />
 
@@ -68,7 +68,7 @@
         tools:ignore="MissingConstraints" />
 
     <EditText
-        android:id="@+id/editTextText4"
+        android:id="@+id/edtciudadReparti"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="225dp"
@@ -98,7 +98,7 @@
         android:ems="10"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="@+id/editTextText6"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText4"
+        app:layout_constraintTop_toBottomOf="@+id/edtciudadReparti"
         tools:ignore="MissingConstraints" />
 
     <TextView

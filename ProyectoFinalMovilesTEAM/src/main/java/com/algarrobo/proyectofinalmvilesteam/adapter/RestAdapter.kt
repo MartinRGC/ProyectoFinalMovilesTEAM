@@ -19,11 +19,7 @@ class RestAdapter (private var restaList: List<LRestModel>):
     override fun onBindViewHolder(holder: RestauViewHolder, position: Int) {
         val currentRest = restaList[position]
 
-        holder.nombreRestTV.text = currentRest.nombre
-        holder.tipoRestTV.text = currentRest.tipo
-        holder.telefonoRestTV.text = currentRest.telefono
-        holder.horarioateRestTV.text = currentRest.horarioatencion
-        holder.rucRestTV.text = currentRest.ruc
+
     }
 
     override fun getItemCount(): Int {

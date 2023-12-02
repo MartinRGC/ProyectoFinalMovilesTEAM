@@ -5,9 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.ImageView
 import androidx.core.content.ContextCompat
-import androidx.recyclerview.widget.RecyclerView
 
 class Menu_principalActivity : AppCompatActivity() {
     @SuppressLint("WrongViewCast", "MissingInflatedId")
@@ -15,29 +13,21 @@ class Menu_principalActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_principal)
 
-        val button: Button = findViewById(R.id.btnmenuprincipal)
+        val button: Button = findViewById(R.id.btnmenuprincipalDOM)
         button.setTextColor(ContextCompat.getColor(this, android.R.color.white))
 
-        val listausuarios = findViewById<Button>(R.id.btnlistusuarios)
-        val listarestaurantes = findViewById<Button>(R.id.btnlistrest)
-        val listatiendas = findViewById<Button>(R.id.btnlisttiendas)
-        val listapedidos = findViewById<Button>(R.id.btnlistpeddos)
-        val listarepartidores = findViewById<Button>(R.id.btnlistrepar)
-        val listaestadisticasgenerales = findViewById<Button>(R.id.btnlistestadg)
+        val listarestaurantes = findViewById<Button>(R.id.btnlistrestDOM)
+        val listapedidos = findViewById<Button>(R.id.btnlistpeddosDOM)
+        val listarepartidores = findViewById<Button>(R.id.btnlistreparDOM)
+        val listaestadisticasgenerales = findViewById<Button>(R.id.btnlistestadgDOM)
 
-        listausuarios.setOnClickListener{
-            startActivity(Intent(this, ListausuariosActivity::class.java))
-        }
 
-        val btnfinalizar: Button = findViewById(R.id.btnfinalizar)
+        val btnfinalizar: Button = findViewById(R.id.btnfinalizarDOM)
 
         btnfinalizar.setOnClickListener{
             startActivity(Intent(this, LoginActivity::class.java))
         }
 
-        listatiendas.setOnClickListener{
-            startActivity(Intent(this, ListatiendasActivity::class.java))
-        }
         listarestaurantes.setOnClickListener{
             startActivity(Intent(this, ListaRestaurantesActivity::class.java))
         }

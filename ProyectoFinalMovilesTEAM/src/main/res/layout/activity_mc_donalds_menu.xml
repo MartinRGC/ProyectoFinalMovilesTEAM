@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".McDonaldsMenuActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="18dp">
+
+    <Button
+        android:id="@+id/btnMenuMC"
+        android:layout_width="355dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="28dp"
+        android:background="#8550E4"
+        android:text="MENU PRINCIPAL MC"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnlistMC"
+        android:layout_width="373dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="19dp"
+        android:background="@drawable/rectext1"
+        android:hint="Mi Menú"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMenuMC" />
+
+    <Button
+        android:id="@+id/btnPedidoMC"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="257dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/rectext1"
+        android:hint="Pedidos"
+        app:layout_constraintBottom_toTopOf="@+id/btnReparMC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnReparMC"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="37dp"
+        android:background="@drawable/rectext1"
+        android:hint="Repartidores"
+        app:layout_constraintBottom_toTopOf="@+id/btnEstadMC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPedidoMC" />
+
+    <Button
+        android:id="@+id/btnEstadMC"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="131dp"
+        android:background="@drawable/rectext1"
+        android:hint="@string/Estadisticas_General"
+        app:layout_constraintBottom_toTopOf="@+id/btnFinaMC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnReparMC" />
+
+    <Button
+        android:id="@+id/btnFinaMC"
+        android:layout_width="191dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="74dp"
+        android:background="@drawable/ovalado"
+        android:text="FINALIZAR"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEstadMC" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

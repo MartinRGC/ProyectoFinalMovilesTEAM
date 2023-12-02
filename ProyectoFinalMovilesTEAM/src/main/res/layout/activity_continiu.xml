@@ -31,7 +31,7 @@
         app:srcCompat="@drawable/rectangle14" />
 
     <EditText
-        android:id="@+id/btnlistpeddos"
+        android:id="@+id/btnlistpeddosDOM"
         android:layout_width="282dp"
         android:layout_height="55dp"
         android:layout_marginBottom="516dp"

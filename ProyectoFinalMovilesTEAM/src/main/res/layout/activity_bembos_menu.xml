@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Menu_principalActivity"
+    tools:context=".BembosMenuActivity"
     tools:layout_editor_absoluteX="-1dp"
     tools:layout_editor_absoluteY="-131dp">
 
     <Button
-        android:id="@+id/btnmenuprincipalDOM"
+        android:id="@+id/btnbbmenuprincipal"
         android:layout_width="355dp"
         android:layout_height="49dp"
         android:layout_marginStart="28dp"
@@ -17,16 +17,16 @@
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="67dp"
         android:background="#8550E4"
-        android:text="Menu principal"
+        android:text="Menu principal Bembos"
         android:textColor="#ffffff"
-        app:layout_constraintBottom_toTopOf="@+id/btnlistrestDOM"
+        app:layout_constraintBottom_toTopOf="@+id/btnlistrestBB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/btnlistrestDOM"
+        android:id="@+id/btnlistrestBB"
         android:layout_width="373dp"
         android:layout_height="49dp"
         android:layout_marginStart="19dp"
@@ -40,34 +40,36 @@
         android:textColor="#949494"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnmenuprincipalDOM"
+        app:layout_constraintTop_toBottomOf="@+id/btnbbmenuprincipal"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/btnlistpeddosDOM"
+        android:id="@+id/btnlistpeddosBB"
         android:layout_width="376dp"
-        android:layout_height="49dp"
+        android:layout_height="0dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="263dp"
         android:layout_marginEnd="19dp"
+        android:layout_marginBottom="261dp"
         android:background="@drawable/rectext1"
         android:ems="10"
         android:hint="Pedidos"
         android:inputType="text"
         android:textAlignment="center"
         android:textColor="#949494"
+        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnlistrestDOM"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/btnlistreparDOM"
+        android:id="@+id/btnlistreparBB"
         android:layout_width="373dp"
         android:layout_height="49dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="19dp"
         android:background="@drawable/rectext1"
         android:ems="10"
         android:hint="@string/Repartidores"
@@ -76,16 +78,16 @@
         android:textColor="#949494"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnlistpeddosDOM"
+        app:layout_constraintTop_toBottomOf="@+id/btnlistpeddosBB"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/btnlistestadgDOM"
+        android:id="@+id/btnestadisBB"
         android:layout_width="375dp"
         android:layout_height="52dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="19dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="17dp"
         android:background="@drawable/rectext1"
         android:ems="10"
         android:hint="@string/Estadisticas_General"
@@ -94,25 +96,21 @@
         android:textColor="#949494"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnlistreparDOM"
+        app:layout_constraintTop_toBottomOf="@+id/btnlistreparBB"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/btnfinalizarDOM"
+        android:id="@+id/button"
         android:layout_width="191dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="118dp"
-        android:layout_marginTop="102dp"
-        android:layout_marginEnd="103dp"
-        android:layout_marginBottom="102dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="109dp"
         android:background="@drawable/ovalado"
-        android:text="FINALIZAR"
-        android:textColor="#ffffff"
+        android:text="Finalizar"
+        android:textColor="#FBFBFB"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnlistestadgDOM"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/btnlistpeddosBB" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
