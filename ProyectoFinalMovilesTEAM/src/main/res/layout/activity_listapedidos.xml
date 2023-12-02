@@ -37,7 +37,7 @@
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/btnregrresr"
         android:layout_width="202dp"
         android:layout_height="43dp"
         android:background="#6433FF "
