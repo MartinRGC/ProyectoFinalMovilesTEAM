@@ -18,16 +18,11 @@ class Menu_principalActivity : AppCompatActivity() {
         val button: Button = findViewById(R.id.btnmenuprincipal)
         button.setTextColor(ContextCompat.getColor(this, android.R.color.white))
 
-        val listausuarios = findViewById<Button>(R.id.btnlistusuarios)
         val listarestaurantes = findViewById<Button>(R.id.btnlistrest)
-        val listatiendas = findViewById<Button>(R.id.btnlisttiendas)
         val listapedidos = findViewById<Button>(R.id.btnlistpeddos)
         val listarepartidores = findViewById<Button>(R.id.btnlistrepar)
         val listaestadisticasgenerales = findViewById<Button>(R.id.btnlistestadg)
 
-        listausuarios.setOnClickListener{
-            startActivity(Intent(this, ListausuariosActivity::class.java))
-        }
 
         val btnfinalizar: Button = findViewById(R.id.btnfinalizar)
 
@@ -35,9 +30,6 @@ class Menu_principalActivity : AppCompatActivity() {
             startActivity(Intent(this, LoginActivity::class.java))
         }
 
-        listatiendas.setOnClickListener{
-            startActivity(Intent(this, ListatiendasActivity::class.java))
-        }
         listarestaurantes.setOnClickListener{
             startActivity(Intent(this, ListaRestaurantesActivity::class.java))
         }

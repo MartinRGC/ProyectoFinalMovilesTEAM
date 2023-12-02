@@ -1,0 +1,16 @@
+<!-- bottom_sheet_borrar.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Agrega cualquier otro contenido adicional que desees mostrar aquí -->
+
+    <Button
+        android:id="@+id/btnConfirmarBorrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ovalado"
+        android:text="Borrar"
+        android:textColor="#FFFFFF" />
+</LinearLayout>

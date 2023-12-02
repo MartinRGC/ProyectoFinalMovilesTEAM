@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -24,13 +25,12 @@ class RepartidoresActivity : AppCompatActivity() {
         val recyclerView: RecyclerView = findViewById(R.id.rvRepartidoresAdmin)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        reparAdapter = RepartiAdapter(emptyList()) // Inicializar con una lista vacía
+        reparAdapter = RepartiAdapter(emptyList())
         recyclerView.adapter = reparAdapter
 
-
         // Obtener datos desde Firebase y actualizar el adaptador
-        obtenerRepartiDesdeFirebase { restaList ->
-            reparAdapter.actualizarLista(restaList)
+        obtenerRepartiDesdeFirebase { repartList ->
+            reparAdapter.actualizarLista(repartList)
         }
 
         val btnRegreRepar: Button = findViewById(R.id.btnRegReparti)
@@ -49,15 +49,18 @@ class RepartidoresActivity : AppCompatActivity() {
         db.collection("repartidores")
             .get()
             .addOnSuccessListener { result ->
-                val repartList = result.map { document ->
-                    document.toObject(LRepartidorModel::class.java)
+                val repartList = mutableListOf<LRepartidorModel>()
+
+                for (document in result) {
+                    val repartidor = document.toObject(LRepartidorModel::class.java)
+                    repartList.add(repartidor)
                 }
+
                 callback(repartList)
             }
             .addOnFailureListener { exception ->
-                // Manejar errores
+                Log.e("RepartidoresActivity", "Error al obtener repartidores", exception)
                 callback(emptyList())
             }
     }
-
 }

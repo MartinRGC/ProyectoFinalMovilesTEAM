@@ -7,40 +7,50 @@
     tools:context=".RrepartidoresActivity">
 
     <EditText
-        android:id="@+id/edtapellidoReparti"
+        android:id="@+id/edtcorreoModi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:ems="10"
         android:inputType="text"
-        app:layout_constraintStart_toStartOf="@+id/edtnombreReparti"
-        app:layout_constraintTop_toBottomOf="@+id/edtnombreReparti"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteX="170dp"
+        tools:layout_editor_absoluteY="404dp" />
+
+    <EditText
+        android:id="@+id/edtteleModi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="170dp"
+        tools:layout_editor_absoluteY="332dp" />
+
+    <EditText
+        android:id="@+id/edtciudaModi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="174dp"
+        tools:layout_editor_absoluteY="257dp" />
+
+    <EditText
+        android:id="@+id/edtapeModi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="170dp"
+        tools:layout_editor_absoluteY="175dp" />
 
     <TextView
         android:id="@+id/textView30"
         android:layout_width="0dp"
         android:layout_height="31dp"
         android:layout_marginStart="15dp"
-        android:layout_marginEnd="43dp"
         android:text="Nombre Completo"
-        app:layout_constraintBaseline_toBaselineOf="@+id/edtnombreReparti"
-        app:layout_constraintEnd_toStartOf="@+id/edtnombreReparti"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/edtnombreReparti"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="95dp"
-        android:layout_marginEnd="28dp"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView30"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="109dp" />
 
     <TextView
         android:id="@+id/textView31"
@@ -64,17 +74,6 @@
         app:layout_constraintTop_toTopOf="@+id/textView31"
         tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/edtciudadReparti"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintStart_toStartOf="@+id/edtapellidoReparti"
-        app:layout_constraintTop_toBottomOf="@+id/edtapellidoReparti"
-        tools:ignore="MissingConstraints" />
-
     <TextView
         android:id="@+id/textView90"
         android:layout_width="0dp"
@@ -88,20 +87,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textView20"
         tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/edttelefonoReparti"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="360dp"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtciudadReparti"
-        tools:ignore="MissingConstraints" />
-
     <TextView
         android:id="@+id/textView54"
         android:layout_width="wrap_content"
@@ -113,42 +98,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textView90"
         tools:ignore="MissingConstraints" />
 
-    <EditText
-        android:id="@+id/edtcorreoReparti"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="250dp"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edttelefonoReparti"
-        app:layout_constraintVertical_bias="0.263"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/btnRegister3"
-        android:layout_width="236dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="121dp"
-        android:layout_marginBottom="122dp"
-        android:background="@drawable/ovalado"
-        android:text="REGISTRAR"
-        android:textColor="#ffffff"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/edtcorreoReparti"
-        tools:ignore="DuplicateIds,MissingConstraints,NotSibling" />
-
     <Button
         android:id="@+id/btnRegister2"
         android:layout_width="0dp"
         android:layout_height="46dp"
         android:layout_marginStart="73dp"
-        android:layout_marginTop="34dp"
         android:layout_marginEnd="73dp"
         android:layout_marginBottom="42dp"
         android:background="@drawable/ovalado"
@@ -157,7 +111,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRegister3"
         tools:ignore="DuplicateIds,MissingConstraints" />
 
     <Button
@@ -165,17 +118,33 @@
         android:layout_width="224dp"
         android:layout_height="53dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="26dp"
         android:background="#462B9C"
         android:text="REGISTRO DE REPARTIDORES"
         android:textColor="#ffffff"
-        app:layout_constraintBottom_toTopOf="@+id/edtnombreReparti"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/edtnombreModi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="171dp"
+        tools:layout_editor_absoluteY="93dp" />
+
+    <Button
+        android:id="@+id/btnGuardarCambios"
+        android:layout_width="252dp"
+        android:layout_height="47dp"
+        android:background="@drawable/ovalado"
+        android:text="Modificar"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="79dp"
+        tools:layout_editor_absoluteY="566dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

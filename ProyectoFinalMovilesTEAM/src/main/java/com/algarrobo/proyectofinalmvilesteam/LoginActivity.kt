@@ -28,9 +28,9 @@ class LoginActivity : AppCompatActivity() {
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
                         // Verificar el tipo de usuario después del inicio de sesión exitoso
-                        if (correo.endsWith("@admin.com")) {
+                        if (correo.endsWith("@seller.com")) {
                             startActivity(Intent(this, Menu_principalActivity::class.java))
-                        } else if (correo.endsWith("@seller.com")) {
+                        } else if (correo.endsWith("@admin.com")) {
                             startActivity(Intent(this, PrincipalActivity::class.java))
                         } else {
                             Snackbar
