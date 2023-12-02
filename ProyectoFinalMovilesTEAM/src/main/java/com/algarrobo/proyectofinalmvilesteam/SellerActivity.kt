@@ -3,6 +3,7 @@ package com.algarrobo.proyectofinalmvilesteam
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import com.algarrobo.proyectofinalmvilesteam.models.CustomerModel
@@ -80,5 +81,8 @@ class SellerActivity : AppCompatActivity() {
 
                 }
         }
+    }
+    fun regresar1(view: View){
+        startActivity(Intent(this,LoginActivity::class.java))
     }
 }

@@ -49,6 +49,21 @@
         app:layout_constraintStart_toStartOf="@+id/tvcondcon"
         app:layout_constraintTop_toBottomOf="@+id/btnlistusuarios" />
 
+    <Button
+        android:id="@+id/btnEnviar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="77dp"
+        android:layout_marginEnd="79dp"
+        android:layout_marginBottom="35dp"
+        android:background="@drawable/rectsignup"
+        android:text="REGISTRARSE"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/tvcondcon"
+        app:layout_constraintEnd_toEndOf="@+id/btnlistusuarios"
+        app:layout_constraintHorizontal_bias="0.606"
+        app:layout_constraintStart_toStartOf="@+id/tvcondcon" />
+
     <TextView
         android:id="@+id/tvsignupcon"
         android:layout_width="wrap_content"
@@ -156,5 +171,17 @@
         app:layout_constraintBottom_toTopOf="@+id/edtphonecustomer"
         app:layout_constraintStart_toStartOf="@+id/edtusercutomer"
         app:layout_constraintTop_toBottomOf="@+id/edtusercutomer" />
+
+    <ImageView
+        android:id="@+id/imageView51"
+        android:layout_width="61dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="28dp"
+        android:onClick="regresar"
+        app:layout_constraintEnd_toStartOf="@+id/bncustomer"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/felcha" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

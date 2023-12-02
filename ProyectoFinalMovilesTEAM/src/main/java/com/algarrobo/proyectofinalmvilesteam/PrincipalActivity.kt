@@ -52,5 +52,8 @@ class PrincipalActivity : AppCompatActivity() {
     fun Veterinaria(view: View){
         startActivity(Intent(this,ListadoVeterinariaActivity::class.java))
     }
+    fun notificaciones(view: View){
+        startActivity(Intent(this,NotificacionActivity::class.java))
+    }
 
 }
