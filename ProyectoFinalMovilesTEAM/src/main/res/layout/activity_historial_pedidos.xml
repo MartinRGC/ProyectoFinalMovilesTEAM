@@ -29,7 +29,7 @@
         app:srcCompat="@drawable/rec_1" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tvUbicacion"
         android:layout_width="122dp"
         android:layout_height="26dp"
         android:layout_marginTop="8dp"
@@ -48,7 +48,7 @@
         android:layout_marginTop="4dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView22"
         app:layout_constraintStart_toStartOf="@+id/imageView22"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/tvUbicacion"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/image18"
         tools:ignore="MissingConstraints" />
@@ -59,7 +59,7 @@
         android:layout_height="54dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView22"
         app:layout_constraintStart_toEndOf="@+id/imageView23"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/tvUbicacion"
         app:layout_constraintVertical_bias="0.075"
         app:srcCompat="@drawable/verde" />
 
@@ -72,7 +72,7 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView22"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView26"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/tvUbicacion"
         app:layout_constraintVertical_bias="0.153"
         app:srcCompat="@drawable/casia" />
 
@@ -82,7 +82,7 @@
         android:layout_height="45dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView22"
         app:layout_constraintStart_toEndOf="@+id/imageView27"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/tvUbicacion"
         app:layout_constraintVertical_bias="0.235"
         app:srcCompat="@drawable/image19" />
 
@@ -92,7 +92,7 @@
         android:layout_height="56dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView22"
         app:layout_constraintStart_toEndOf="@+id/imageView24"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/tvUbicacion"
         app:layout_constraintVertical_bias="0.075"
         app:srcCompat="@drawable/motito"
         tools:ignore="MissingConstraints" />
@@ -101,13 +101,13 @@
         android:id="@+id/imageView28"
         android:layout_width="367dp"
         android:layout_height="439dp"
+        android:layout_marginTop="25dp"
         android:layout_marginBottom="52dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.636"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView22"
-        app:layout_constraintVertical_bias="0.857"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/rectangle14" />
 
     <ImageView

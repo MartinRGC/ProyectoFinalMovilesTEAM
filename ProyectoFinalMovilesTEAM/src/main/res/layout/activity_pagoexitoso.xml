@@ -36,6 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:layout_marginBottom="112dp"
+        android:onClick="salir"
         android:text="Salir"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

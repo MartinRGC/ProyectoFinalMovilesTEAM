@@ -32,5 +32,8 @@ class PagoexitosoActivity: AppCompatActivity() {
     } fun seguir(view: View){
         startActivity(Intent(this,SeguimientoPedidoActivity::class.java))
     }
+    fun salir(view: View){
+    startActivity(Intent(this,PrincipalActivity::class.java))
+}
 
 }

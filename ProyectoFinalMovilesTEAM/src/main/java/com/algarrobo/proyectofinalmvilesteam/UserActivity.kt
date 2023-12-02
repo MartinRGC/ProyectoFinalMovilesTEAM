@@ -26,4 +26,7 @@ class UserActivity : AppCompatActivity() {
     fun MenuUsuario(view: View){
         startActivity(Intent(this,PrincipalActivity::class.java))
 }
+    fun salir4(view: View){
+        startActivity(Intent(this,SplashActivity::class.java))
+    }
     }

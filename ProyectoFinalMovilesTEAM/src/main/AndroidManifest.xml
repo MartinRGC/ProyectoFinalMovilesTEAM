@@ -25,6 +25,9 @@
             android:name=".SeguimientoPedidoActivity"
             android:exported="false" />
         <activity
+            android:name=".CalificaciónActivity"
+            android:exported="false" />
+        <activity
             android:name=".MetodoDePagoActivity"
             android:exported="false" />
         <activity
