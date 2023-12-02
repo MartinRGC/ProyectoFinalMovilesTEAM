@@ -24,7 +24,7 @@ class RestauAdapter(private var lstRestau: List<RestauranteModel>): RecyclerView
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tvNombre: TextView = itemView.findViewById(R.id.tvNombre)
+        val tvNombre: TextView = itemView.findViewById(R.id.tvNombrePago)
         val ivRestaurante: ImageView = itemView.findViewById(R.id.ivProductoR)
         val tvPuntuacion: TextView = itemView.findViewById(R.id.tvPuntuacion)
         val tvTiempo: TextView = itemView.findViewById(R.id.tvTiempo)

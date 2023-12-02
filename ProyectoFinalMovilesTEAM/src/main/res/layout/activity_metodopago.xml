@@ -3,13 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:onClick="agregar"
+    tools:context=".MetodoDePagoActivity">
+
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="374dp"
-        android:layout_height="429dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/rvListaMP"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView29" />
 
@@ -57,8 +62,24 @@
         android:layout_width="89dp"
         android:layout_height="77dp"
         android:layout_marginTop="16dp"
+        android:onClick="agregar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView32"
-        app:srcCompat="@drawable/adicionales" />
+        app:srcCompat="@drawable/adicionales"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnContinuar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:onClick="pagar"
+        android:text="Pagar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvListaMP"
+        app:layout_constraintVertical_bias="0.823" />
 </androidx.constraintlayout.widget.ConstraintLayout>

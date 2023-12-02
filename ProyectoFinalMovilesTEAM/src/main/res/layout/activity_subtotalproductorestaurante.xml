@@ -75,7 +75,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/btnIralPago"
         app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 
@@ -128,7 +128,7 @@
         android:id="@+id/textView63"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="48dp"
         android:layout_marginTop="40dp"
         android:text="TOTAL:"
         android:textSize="24dp"
@@ -250,15 +250,16 @@
         app:layout_constraintTop_toBottomOf="@+id/textView62" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/btnIralPago"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
+        android:onClick="pago"
         android:text="Ir al pago"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.791"
+        app:layout_constraintHorizontal_bias="0.408"
         app:layout_constraintStart_toEndOf="@+id/tvTotalPR"
         app:layout_constraintTop_toBottomOf="@+id/edtapellidoReparti"
         app:layout_constraintVertical_bias="0.0" />
